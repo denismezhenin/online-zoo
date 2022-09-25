@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+header {
+	backdrop-filter: blur(2px);
+	position: relative;
+	z-index: 100;
+	
+	.fhone {
+		background: #000000;
+	}
+
+	&:after {
+		content: "";
+		height: 780px;
+		width: 100%; 
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: url("../../assets/images/Giant_Panda.png") no-repeat center;
+		z-index: -100;
+	}
+}
+.header {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	.logo_wrapper {
+		margin: 14px 63px 9px 0px;
+		position: relative;
+		width: 82px;
+		height: 52px;
+		font-weight: 400;
+		font-size: 19.0145px;
+		line-height: 120%;
+		text-align: center;
+		border: 1.18841px solid #FFFFFF;
+	}
+	.logo {
+		.logo_bamboo {
+			display: block;
+			bottom: 0px;
+			left: 16%;
+			width: 7.03px;
+			height: 20.98px;
+			position: absolute;
+			background-image: url("../../assets/images/bamboo.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			scale: 1.7;
+		}
+	}
+	.designed-link {
+	}
+	.nav_block {
+		
+	}
+	.navigation {
+		display: flex;
+		text-decoration: none;
+		list-style: none;
+		margin: 0px;
+		.nav-item {
+			padding-right: 58px;
+		}
+	}
+}
+
