@@ -5,11 +5,16 @@
 /**
  * Set up a decent box model on the root element
  */
+ * {
+  margin: 0 auto;
+  padding: 0;
+ }
  body {
 	max-width: $max-width;
 	min-height: 100vh;
-	margin: 0 auto;
+  margin: 0 auto;
 }
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
