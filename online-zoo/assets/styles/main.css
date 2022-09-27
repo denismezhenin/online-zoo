@@ -821,6 +821,7 @@ header:after {
   border-radius: 5px;
   height: 423px;
   overflow: hidden;
+  transition: transform 0.4s;
 }
 .animal-slider .animals-blocks .card img {
   transition: transform 0.5s;
@@ -833,12 +834,13 @@ header:after {
 }
 .animal-slider .animals-blocks .card:hover {
   cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
 }
 .animal-slider .animals-blocks .card:hover img {
   transform: scale(1.04);
+  background: rgba(0, 0, 0, 0.25);
 }
 .animal-slider .animals-blocks .card:hover .animal-description {
-  background: rgba(0, 0, 0, 0.25);
   margin-top: -50px;
   transform: translateY(50px);
   z-index: -1;
