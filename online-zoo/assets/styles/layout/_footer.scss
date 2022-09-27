@@ -167,9 +167,25 @@
 			border: 1px solid orange;
 			margin-right: 7px;
 			color: #FFFFFF;
+
 		}
 
-		button {
+		.email-input:invalid {
+			border: 1px solid red;
+		}
+
+		.email-input:valid {
+			.submit-button:hover {
+				background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+			}
+		}
+
+		.submit-button:hover {
+			background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+			color: white;
+		}
+
+		.submit-button {
 			color: #4B9200;
 			background: #F1F3F2;
 			width: 129px;

@@ -23,9 +23,9 @@ header {
 }
 .header {
 	display: grid;
-	grid-template-columns: 145px auto 1fr;
+	grid-template-columns: min-content auto min-content;
 	align-items: center;
-	justify-content: start;
+	// justify-content: start;
 	.logo_wrapper {
 		margin: 17px 0px 12px 0px;
 		position: relative;
@@ -52,29 +52,24 @@ header {
 		}
 	}
 	.designed-link {
-		// display: inline;
-		// justify-self: end;
-		// text-align: right;
-		// display: inline-flex;
-		// justify-content: flex-end;
-
 		a {
-			// margin
-			margin-left: 378px;
-			display: inline;
-			// justify-self: end;
-			// text-align: right;
+			white-space: nowrap;
+
 		}
 	}
 
 	.nav_block {
 		justify-self: start;
+		margin: 0;
+		margin-left: 63px;
 		
 	}
 	.navigation {
 		display: flex;
 		text-decoration: none;
 		list-style: none;
+		justify-content: flex-start;
+		align-content: flex-start;
 		margin: 0px;
 		.nav-link:hover  {
 			color: $orange;

@@ -445,9 +445,9 @@ header:after {
 
 .header {
   display: grid;
-  grid-template-columns: 145px auto 1fr;
+  grid-template-columns: -webkit-min-content auto -webkit-min-content;
+  grid-template-columns: min-content auto min-content;
   align-items: center;
-  justify-content: start;
 }
 .header .logo_wrapper {
   margin: 17px 0px 12px 0px;
@@ -473,16 +473,19 @@ header:after {
   scale: 1.7;
 }
 .header .designed-link a {
-  margin-left: 378px;
-  display: inline;
+  white-space: nowrap;
 }
 .header .nav_block {
   justify-self: start;
+  margin: 0;
+  margin-left: 63px;
 }
 .header .navigation {
   display: flex;
   text-decoration: none;
   list-style: none;
+  justify-content: flex-start;
+  align-content: flex-start;
   margin: 0px;
 }
 .header .navigation .nav-link:hover {
@@ -620,7 +623,17 @@ header:after {
   margin-right: 7px;
   color: #FFFFFF;
 }
-.footer .subscripe-form button {
+.footer .subscripe-form .email-input:invalid {
+  border: 1px solid red;
+}
+.footer .subscripe-form .email-input:valid .submit-button:hover {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+.footer .subscripe-form .submit-button:hover {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  color: white;
+}
+.footer .subscripe-form .submit-button {
   color: #4B9200;
   background: #F1F3F2;
   width: 129px;
@@ -723,6 +736,8 @@ header:after {
   position: relative;
   text-align: center;
   padding-bottom: 100px;
+  position: relative;
+  z-index: 100;
 }
 .animals:after {
   content: "";
@@ -804,9 +819,29 @@ header:after {
 .animal-slider .animals-blocks .card {
   border: 1px solid #F9804B;
   border-radius: 5px;
+  height: 423px;
+  overflow: hidden;
+}
+.animal-slider .animals-blocks .card img {
+  transition: transform 0.5s;
+  position: relative;
+  z-index: 100;
+}
+.animal-slider .animals-blocks .card .animal-description {
+  transition: transform 0.4s;
+  z-index: -1;
 }
 .animal-slider .animals-blocks .card:hover {
   cursor: pointer;
+}
+.animal-slider .animals-blocks .card:hover img {
+  transform: scale(1.04);
+}
+.animal-slider .animals-blocks .card:hover .animal-description {
+  background: rgba(0, 0, 0, 0.25);
+  margin-top: -50px;
+  transform: translateY(50px);
+  z-index: -1;
 }
 .animal-slider .animals-blocks .card .animal-name {
   text-transform: uppercase;

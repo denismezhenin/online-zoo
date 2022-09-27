@@ -74,6 +74,8 @@
 	position: relative;
 	text-align: center;
 	padding-bottom: 100px;
+	position: relative;
+	z-index: 100;
 
 	&:after {
 		content: "";
@@ -106,6 +108,7 @@
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 82px;
+
 
 	.slider-button {
 		position: relative;
@@ -165,11 +168,37 @@
 		grid-row-gap: 20px;
 		align-items: center;
 
+
 		.card {
 			border: 1px solid $orange;
 			border-radius: 5px;
+			height: 423px;
+			overflow: hidden;
+
+			img {
+				transition: transform 0.5s;
+				position: relative;
+				z-index: 100;
+			}
+
+			.animal-description {
+				transition: transform 0.4s;
+				z-index: -1;
+			}
+
 			&:hover {
 				cursor: pointer;
+
+				img {
+					transform: scale(1.04);
+				}
+
+				.animal-description {
+					background:rgba(0, 0, 0, 0.25);
+					margin-top: -50px;
+					transform: translateY(50px);
+					z-index: -1;
+				}
 			}
 			.animal-name {
 				text-transform: uppercase;
