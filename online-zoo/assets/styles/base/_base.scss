@@ -10,11 +10,13 @@
   padding: 0;
  }
  body {
-	max-width: $max-width;
+	width: 1600px;
 	min-height: 100vh;
   margin: 0 auto;
 }
-
+a {
+  transition: 0.4s;
+}
 a:hover {
   cursor: pointer;
   color: orange

@@ -68,14 +68,19 @@
 				}
 			}
 
-			.first {
+			.nav-link:hover  {
 				color: $orange;
-
-				
-		}
-		a:hover, .first:hover {
-			color: #FFFFFF;
-		}
+			}
+	
+			.first {
+					color: $orange;
+					// a:hover, .first:hover {
+					// 	color: #FFFFFF;
+					// }
+			}
+			nav.link:hover, .first:hover {
+				color: #FFFFFF;
+			}
 		}
 			
 	}
@@ -161,6 +166,7 @@
 			background-color: transparent;
 			border: 1px solid orange;
 			margin-right: 7px;
+			color: #FFFFFF;
 		}
 
 		button {
@@ -175,9 +181,9 @@
 	.social-link:hover {
 		color: #4B9200;
 		.social-logo_wrapper  {
-			
+			background-color: #4B9200;
 		}
 	}
 }
-
+ 
 

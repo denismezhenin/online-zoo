@@ -76,14 +76,21 @@ header {
 		text-decoration: none;
 		list-style: none;
 		margin: 0px;
+		.nav-link:hover  {
+			color: $orange;
+		}
 
 		.first {
 				color: $orange;
+				// a:hover, .first:hover {
+				// 	color: #FFFFFF;
+				// }
 		}
-		}
-		a:hover, .first:hover {
+		nav.link:hover, .first:hover {
 			color: #FFFFFF;
 		}
+		}
+
 		
 		.nav-item {
 			padding-right: 58px;

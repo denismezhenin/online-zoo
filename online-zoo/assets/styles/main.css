@@ -316,9 +316,13 @@ template {
 }
 
 body {
-  max-width: 1600px;
+  width: 1600px;
   min-height: 100vh;
   margin: 0 auto;
+}
+
+a {
+  transition: 0.4s;
 }
 
 a:hover {
@@ -481,10 +485,13 @@ header:after {
   list-style: none;
   margin: 0px;
 }
+.header .navigation .nav-link:hover {
+  color: #F9804B;
+}
 .header .navigation .first {
   color: #F9804B;
 }
-.header a:hover, .header .first:hover {
+.header .navigation nav.link:hover, .header .navigation .first:hover {
   color: #FFFFFF;
 }
 .header .nav-item {
@@ -550,10 +557,13 @@ header:after {
 .footer .wrapper .navigation .nav-item:last-child {
   padding-right: 0px;
 }
+.footer .wrapper .navigation .nav-link:hover {
+  color: #F9804B;
+}
 .footer .wrapper .navigation .first {
   color: #F9804B;
 }
-.footer .wrapper .navigation a:hover, .footer .wrapper .navigation .first:hover {
+.footer .wrapper .navigation nav.link:hover, .footer .wrapper .navigation .first:hover {
   color: #FFFFFF;
 }
 .footer .social-nav {
@@ -608,6 +618,7 @@ header:after {
   background-color: transparent;
   border: 1px solid orange;
   margin-right: 7px;
+  color: #FFFFFF;
 }
 .footer .subscripe-form button {
   color: #4B9200;
@@ -620,6 +631,10 @@ header:after {
 .footer .social-link:hover {
   color: #4B9200;
 }
+.footer .social-link:hover .social-logo_wrapper {
+  background-color: #4B9200;
+}
+
 .oval-button {
   width: 298px;
   height: 54px;
@@ -630,7 +645,7 @@ header:after {
 }
 .oval-button:hover {
   cursor: pointer;
-  background: #E47209;
+  background: linear-gradient(113.96deg, #E47209 1.49%, #E47209 101.44%);
 }
 
 .square-button {
@@ -643,7 +658,7 @@ header:after {
 }
 .square-button:hover {
   cursor: pointer;
-  background: #E47209;
+  background: linear-gradient(113.96deg, #E47209 1.49%, #E47209 101.44%);
 }
 
 .main-tittle_block {
