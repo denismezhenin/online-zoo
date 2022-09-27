@@ -23,10 +23,11 @@ header {
 }
 .header {
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: 145px auto 1fr;
 	align-items: center;
+	justify-content: start;
 	.logo_wrapper {
-		margin: 14px 63px 9px 0px;
+		margin: 17px 0px 12px 0px;
 		position: relative;
 		width: 82px;
 		height: 52px;
@@ -51,8 +52,23 @@ header {
 		}
 	}
 	.designed-link {
+		// display: inline;
+		// justify-self: end;
+		// text-align: right;
+		// display: inline-flex;
+		// justify-content: flex-end;
+
+		a {
+			// margin
+			margin-left: 378px;
+			display: inline;
+			// justify-self: end;
+			// text-align: right;
+		}
 	}
+
 	.nav_block {
+		justify-self: start;
 		
 	}
 	.navigation {
@@ -60,9 +76,23 @@ header {
 		text-decoration: none;
 		list-style: none;
 		margin: 0px;
+
+		.first {
+				color: $orange;
+		}
+		}
+		a:hover, .first:hover {
+			color: #FFFFFF;
+		}
+		
 		.nav-item {
 			padding-right: 58px;
+
+			a {
+				margin: 0px;
+			}
 		}
 	}
-}
+
+
 

@@ -1,3 +1,183 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.footer {
+	background-color: black;
+	padding: 40px 0px 50px 0px;
+	.wrapper {
+		display: grid;
+		grid-template-areas: 
+		'logo . form'
+		'button . .'
+		'social nav design';
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		grid-auto-flow: column;
+		// justify-content: start;
+		// align-items: start;
+		// align-content: start;
+
+		.logo_wrapper {
+			grid-area: logo;
+			margin: 0px 0px 69px 0px;
+			position: relative;
+			width: 82px;
+			height: 52px;
+			font-weight: 400;
+			font-size: 19.0145px;
+			line-height: 120%;
+			text-align: center;
+			border: 1.18841px solid #FFFFFF;
+		}
+		.logo {
+			.logo_bamboo {
+				display: block;
+				bottom: 0px;
+				left: 16%;
+				width: 7.03px;
+				height: 20.98px;
+				position: absolute;
+				background-image: url("../../assets/images/bamboo.svg");
+				background-size: contain;
+				background-repeat: no-repeat;
+				scale: 1.7;
+			}
+		}
+
+		.button {
+			grid-area: button;
+			margin-bottom: 30px;
+		}
+
+		.nav {
+			grid-area: nav;
+			justify-self: end;
+			align-self: end;
+		}
+
+		.navigation {
+			
+			display: flex;
+			text-decoration: none;
+			list-style: none;
+			margin: 0px;
+			.nav-item {
+				padding-right: 58px;
+				&:last-child {
+					padding-right: 0px;
+				}
+			}
+
+			.first {
+				color: $orange;
+
+				
+		}
+		a:hover, .first:hover {
+			color: #FFFFFF;
+		}
+		}
+			
+	}
+	.social-nav {
+		grid-area: social;
+		padding-inline-start: 0px;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: flex-start;
+		// align-content: flex-start;
+		// align-items: flex-start;
+		margin: 0px;
+		margin-top: 28px;
+		// text-align: right;
+
+		li {
+			margin-top: 10px;
+			// display: flex;
+			// justify-content: flex-start;
+			// align-content: flex-start;
+			// align-items: flex-start;
+		}
+		.social-logo_wrapper {
+			display: inline-flex;
+			// justify-content: center;
+			// align-content: center;
+			background: rgba(196, 196, 196, 0.5);
+			border-radius: 50%;
+			width: 27px;
+			height: 27px;
+			margin-right: 17px;
+			padding: 5px;
+
+			&:hover {
+				background:#4B9200;
+			}
+
+			.youtube {
+				width: 18px;
+			}
+		}
+		.social-logo {
+			// position: relative;
+			// margin-right: 17px;
+			// &:after {
+			// 	content: "";
+			// 	position: absolute;
+			// background: rgba(196, 196, 196, 0.5);
+			// border-radius: 50%;
+			// width: 26px;
+			// height: 26px;
+			// }
+
+		}
+	}
+	.designedby {
+		align-self: end;
+		justify-self: end;
+		color: white;
+		grid-area: design;
+		text-align: right;
+
+		p {
+			display: inline-block;
+			margin-top: 8px;
+			text-align: right;
+			font-weight: 100;
+		}
+	}
+
+	.subscripe-form {
+		margin-left: 18px;
+		grid-area: form;
+
+		h4 {
+			color: #FFFFFF;
+			margin-bottom: 14px;
+		}
+
+		.email-input {
+			width: 228px;
+			height: 42px;
+			background-color: transparent;
+			border: 1px solid orange;
+			margin-right: 7px;
+		}
+
+		button {
+			color: #4B9200;
+			background: #F1F3F2;
+			width: 129px;
+			height: 42px;
+			border: 1px solid #4B9200;
+			border-radius: 5px;
+		} 
+	}
+	.social-link:hover {
+		color: #4B9200;
+		.social-logo_wrapper  {
+			
+		}
+	}
+}
+
+
