@@ -75,15 +75,26 @@ header {
 			color: $orange;
 		}
 
-		.first {
+		.nav-item:nth-child(4) {
+	
+			a {
 				color: $orange;
-				// a:hover, .first:hover {
-				// 	color: #FFFFFF;
-				// }
+
+				&:hover {
+					color: #FFFFFF;
+				}
+			}
 		}
-		nav.link:hover, .first:hover {
-			color: #FFFFFF;
-		}
+
+		// .first {
+		// 		color: $orange;
+		// 		// a:hover, .first:hover {
+		// 		// 	color: #FFFFFF;
+		// 		// }
+		// }
+		// nav.link:hover, .first:hover {
+		// 	color: #FFFFFF;
+		// }
 		}
 
 		
