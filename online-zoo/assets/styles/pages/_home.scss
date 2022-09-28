@@ -277,6 +277,14 @@ opacity: 0.9;
 
 		p {
 			margin-right: 198px;
+			a {
+				color: black;
+
+				&:hover {
+					color: orange;
+				}
+			}
+			
 		}
 		.bold-text {
 			margin: 40px 0px 10px 99px;

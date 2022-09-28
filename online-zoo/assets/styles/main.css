@@ -905,6 +905,12 @@ header:after {
 .feed .wrapper p {
   margin-right: 198px;
 }
+.feed .wrapper p a {
+  color: black;
+}
+.feed .wrapper p a:hover {
+  color: orange;
+}
 .feed .wrapper .bold-text {
   margin: 40px 0px 10px 99px;
   font-weight: 500;
