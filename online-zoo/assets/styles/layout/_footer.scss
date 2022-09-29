@@ -19,7 +19,7 @@
 
 		.logo_wrapper {
 			grid-area: logo;
-			margin: 0px 0px 69px 0px;
+			margin: 4px 0px 69px 0px;
 			position: relative;
 			width: 82px;
 			height: 52px;
@@ -47,7 +47,7 @@
 		form, .button {
 			grid-area: button;
 			margin-left: 0;
-			margin-bottom: 30px;
+			margin-bottom: -2px;
 		}
 
 		.nav {
@@ -94,11 +94,11 @@
 		// align-content: flex-start;
 		// align-items: flex-start;
 		margin: 0px;
-		margin-top: 28px;
+		margin-top: 36px;
 		// text-align: right;
 
 		li {
-			margin-top: 10px;
+			margin-top: 8.5px;
 			// display: flex;
 			// justify-content: flex-start;
 			// align-content: flex-start;

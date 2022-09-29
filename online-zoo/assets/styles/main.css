@@ -510,7 +510,7 @@ header:after {
 }
 .footer .wrapper .logo_wrapper {
   grid-area: logo;
-  margin: 0px 0px 69px 0px;
+  margin: 4px 0px 69px 0px;
   position: relative;
   width: 82px;
   height: 52px;
@@ -535,7 +535,7 @@ header:after {
 .footer .wrapper form, .footer .wrapper .button {
   grid-area: button;
   margin-left: 0;
-  margin-bottom: 30px;
+  margin-bottom: -2px;
 }
 .footer .wrapper .nav {
   grid-area: nav;
@@ -568,10 +568,10 @@ header:after {
   -webkit-padding-start: 0px;
           padding-inline-start: 0px;
   margin: 0px;
-  margin-top: 28px;
+  margin-top: 36px;
 }
 .footer .social-nav li {
-  margin-top: 10px;
+  margin-top: 8.5px;
 }
 .footer .social-nav .social-logo_wrapper {
   display: inline-flex;
@@ -911,6 +911,9 @@ header:after {
 }
 .feed .wrapper p a {
   color: black;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #FE9013;
+          text-decoration-color: #FE9013;
 }
 .feed .wrapper p a:hover {
   color: orange;
