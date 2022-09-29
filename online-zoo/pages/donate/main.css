@@ -532,8 +532,9 @@ header:after {
   background-repeat: no-repeat;
   scale: 1.7;
 }
-.footer .wrapper .button {
+.footer .wrapper form, .footer .wrapper .button {
   grid-area: button;
+  margin-left: 0;
   margin-bottom: 30px;
 }
 .footer .wrapper .nav {
