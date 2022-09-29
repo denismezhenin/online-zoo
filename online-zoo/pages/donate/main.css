@@ -30,10 +30,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -367,14 +363,11 @@ body {
 }
 
 h1 {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 106.496px;
-  line-height: 75%;
+  font-weight: 400;
+  font-size: 19.0145px;
+  line-height: 120%;
   text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
+  border: 1.18841px solid #FFFFFF;
 }
 
 h2 {

@@ -30,10 +30,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -367,14 +363,11 @@ body {
 }
 
 h1 {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 106.496px;
-  line-height: 75%;
+  font-weight: 400;
+  font-size: 19.0145px;
+  line-height: 120%;
   text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
+  border: 1.18841px solid #FFFFFF;
 }
 
 h2 {
@@ -695,8 +688,18 @@ header:after {
   border-radius: 50%;
   z-index: -1;
 }
-.main-tittle_block h1 {
+.main-tittle_block .main-title {
   margin: 0px 0px 58px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 106.496px;
+  line-height: 75%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.main-tittle_block .main-title span {
+  color: #FFEE2E;
 }
 .main-tittle_block button {
   margin: 0 auto;

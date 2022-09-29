@@ -24,8 +24,19 @@
 		z-index: -1;
 	}
 
-	h1 {
+	.main-title {
 		margin: 0px 0px 58px;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 106.496px;
+		line-height: 75%;
+		text-align: center;
+		text-transform: uppercase;
+		color: #FFFFFF;
+
+		span {
+			color: #FFEE2E;
+		}
 	}
 
 	button {
