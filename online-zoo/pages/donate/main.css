@@ -806,6 +806,7 @@ header:after {
   z-index: 100;
 }
 .donation .donate-wrapper .amount-range .range-container .amount li {
+  position: relative;
   display: inline-block;
   margin-right: 48px;
   width: 78px;
@@ -818,14 +819,35 @@ header:after {
   text-transform: uppercase;
   color: #333B41;
 }
-.donation .donate-wrapper .amount-range .range-container .amount li .radio-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.donation .donate-wrapper .amount-range .range-container .amount li:after {
+  content: "";
+  position: absolute;
+  top: 15.5px;
   width: 10px;
   height: 10px;
   background: #FFEE2E;
   border-radius: 50%;
+  z-index: -1;
+}
+.donation .donate-wrapper .amount-range .range-container .amount li input:checked {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFEE2E;
+  background-color: #FFEE2E;
+  border: 15px solid rgba(0, 0, 0, 0);
+  z-index: 0;
+  background: url("../../assets/images/input-checked.svg") no-repeat center;
+}
+.donation .donate-wrapper .amount-range .range-container .amount li .radio-button {
+  margin-left: -15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .donation .donate-wrapper .amount-range .range-container .amount li:last-child {
   margin: 0;
