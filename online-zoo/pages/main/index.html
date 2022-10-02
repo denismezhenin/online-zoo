@@ -12,11 +12,12 @@
 </head>
 <body>
 	<header>
-		<div class="fhone">
+		<div class="background">
 			<div class="wrapper">
 				<div class="header">
 					<div class="logo_wrapper">
 						<h1><a href="#!" class="logo">PetStory online<span class="logo_bamboo"></span></a></h1>
+						<img src="../../assets/images/logo_footer.svg" alt="">
 					</div>
 					<nav class="nav_block">
 						<ul class="navigation">
@@ -30,6 +31,9 @@
 					<div class="designed-link">
 						<a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed By ©</a>
 					</div>
+					<div class="hamburger">
+						<span class="hamburger-line"></span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -37,14 +41,29 @@
 	</header>
 	<main>
 		<section class="watch-animal" id="about">
-			<div class="main-tittle_block">
-				<h2 class="main-title">Watch your <span>favorite</span> animal online</h2>
-				<button class="oval-button">watch online</button>
+			<div class="wrapper watch-wrapper">
+				<div class="main-title-wrapper">
+					<div class="main-tittle_block">
+						<div class="title-wrapper">
+							<h2 class="main-title">Watch your <span>favorite</span> animal online</h2>
+						</div>
+						<div class="watch-button">
+							<button class="oval-button">watch online</button>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</section>
 		<section class="backstage" id="map">
 			<div class="wrapper">
-				<img src="../../assets/images/bamboo-cap.png" alt="bamboo cap" class="backstage_image">
+				<!-- <div class="backstage-image-wrapper"> -->
+					<picture>
+						<source media="(min-width: 1600px" srcset="../../assets/images/bamboo-cap.png">
+						<source media="(min-width: 320px" srcset="../../assets/images/bamboo-cap-small.png">
+						<img src="../../assets/images/bamboo-cap.png" alt="bamboo cap" class="backstage_image"> 
+					</picture>
+				<!-- </div> -->
 				<div class="backstage_description">
 					<H2>The Backstage of the Wilderness World.</H2>
 					<p>The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
@@ -55,54 +74,64 @@
 		</section>
 		<section class="animals" id="zoo">
 			<div class="animal-slider">
-				<span class="slider-button prev"></span>
+				<span class="slider-button prev big"></span>
 				<div class="animals-blocks">
-					<div class="card">
-						<img src="../../assets/images/Rectangle 5.png" alt="panda">
-						<div class="animal-description">
-							<p class="animal-name">giant Pandas</p>
-							<p class="animal-location banana">Native to Southwest China</p>
-						</div>
+					<div class="animal-first-row">
 
-					</div>
-					<div class="card">
-						<img src="../../assets/images/eagle.png" alt="eagle">
-						<div class="animal-description">
-							<p class="animal-name">Eagles</p>
-							<p class="animal-location meat">Native to South America</p>
+						<div class="card">
+							<img src="../../assets/images/Rectangle 5.png" alt="panda">
+							<div class="animal-description">
+								<p class="animal-name">giant Pandas</p>
+								<p class="animal-location banana">Native to Southwest China</p>
+							</div>
+	
 						</div>
+						<div class="card">
+							<img src="../../assets/images/eagle.png" alt="eagle">
+							<div class="animal-description">
+								<p class="animal-name">Eagles</p>
+								<p class="animal-location meat">Native to South America</p>
+							</div>
+	
+						</div>
+						<div class="card">
+							<img src="../../assets/images/gorila.png" alt="gorila">
+							<div class="animal-description">
+								<p class="animal-name">Gorillas</p>
+								<p class="animal-location banana">Native to Congo</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-buttons">
+						<span class="slider-button prev"></span>
+						<span class="slider-button next"></span>
+					</div>
+					<div class="animal-second-row">
 
-					</div>
-					<div class="card">
-						<img src="../../assets/images/gorila.png" alt="gorila">
-						<div class="animal-description">
-							<p class="animal-name">Gorillas</p>
-							<p class="animal-location banana">Native to Congo</p>
+						<div class="card">
+							<img src="../../assets/images/len.png" alt="sloth">
+							<div class="animal-description">					
+								<p class="animal-name">Two-toed Sloth</p>
+								<p class="animal-location banana">Mesoamerica, South America</p>
+							</div>
 						</div>
-					</div>
-					<div class="card">
-						<img src="../../assets/images/len.png" alt="sloth">
-						<div class="animal-description">					
-							<p class="animal-name">Two-toed Sloth</p>
-							<p class="animal-location banana">Mesoamerica, South America</p>
+						<div class="card">
+							<img src="../../assets/images/cheetah.png" alt="cheetah">
+							<div class="animal-description">
+								<p class="animal-name">cheetahs</p>
+								<p class="animal-location meat">Native to Africa</p>
+							</div>
 						</div>
-					</div>
-					<div class="card">
-						<img src="../../assets/images/cheetah.png" alt="cheetah">
-						<div class="animal-description">
-							<p class="animal-name">cheetahs</p>
-							<p class="animal-location meat">Native to Africa</p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="../../assets/images/penguin.png" alt="penguin">
-						<div class="animal-description">
-							<p class="animal-name">Penguins</p>
-							<p class="animal-location meat">Native to Antarctica</p>
+						<div class="card">
+							<img src="../../assets/images/penguin.png" alt="penguin">
+							<div class="animal-description">
+								<p class="animal-name">Penguins</p>
+								<p class="animal-location meat">Native to Antarctica</p>
+							</div>
 						</div>
 					</div>
 				</div>
-				<span class="slider-button next"></span>
+				<span class="slider-button next big"></span>
 			</div>
 			<button class="oval-button">choose your favorite</button>
 		</section>
@@ -143,12 +172,13 @@
 				<h3>Testimonials</h3>
 				<div class="testers-reviews">
 					<div class="testimonials-card">
-						<img class="use-icon michael" src="../../assets/images/michael.svg" alt="user-icon">						
-						<div class="user-information">
-							<p class="user-name">Michael John</p>
-							<p class="user-location">Local Austria • Today</p>
+						<div class="user">
+							<img class="use-icon michael" src="../../assets/images/michael.svg" alt="user-icon">						
+							<div class="user-information">
+								<p class="user-name">Michael John</p>
+								<p class="user-location">Local Austria • Today</p>
+							</div>
 						</div>
-
 						<p class="user-review">The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals. \n The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
 The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
 							</p>
@@ -159,6 +189,7 @@ The best online zoo I’ve met. My son delighted very much ljves to watch gouill
 							<p class="user-name">Oskar Samborsky</p>
 							<p class="user-location">Local Austria • Yesterday</p>
 						</div>
+						<div class="user"></div>
 
 						<p class="user-review">Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. 
 The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
@@ -166,10 +197,13 @@ The best online zoo I’ve met. My son delighted very much ljves to watch gouill
 							</p>
 					</div>
 					<div class="testimonials-card">
-						<img class="use-icon michael" src="../../assets/images/fredericka.png" alt="user-icon">
-						<div class="user-information">
-							<p class="user-name">Fredericka Michelin</p>
-							<p class="user-location">Local Austria • Yesterday</p>
+						<div class="user">
+						
+							<img class="use-icon michael" src="../../assets/images/fredericka.png" alt="user-icon">
+							<div class="user-information">
+								<p class="user-name">Fredericka Michelin</p>
+								<p class="user-location">Local Austria • Yesterday</p>
+							</div>
 						</div>
 
 						<p class="user-review">The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
@@ -178,11 +212,13 @@ The best online zoo I’ve met. My son delighted very much ljves to watch gouill
 							</p>
 					</div>
 					<div class="testimonials-card">
-						<img class="use-icon michael" src="../../assets/images/mila.png" alt="user-icon">
-							<div class="user-information">
-								<p class="user-name">Mila Riksha</p>
-								<p class="user-location">Local Austria • Yesterday</p>
-							</div>
+						<div class="user">
+							<img class="use-icon michael" src="../../assets/images/mila.png" alt="user-icon">
+								<div class="user-information">
+									<p class="user-name">Mila Riksha</p>
+									<p class="user-location">Local Austria • Yesterday</p>
+								</div>
+						</div>
 						<p class="user-review">My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas.
 The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I’ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
 							</p>

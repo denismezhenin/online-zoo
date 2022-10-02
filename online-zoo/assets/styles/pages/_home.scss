@@ -1,7 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-
+.watch-wrapper {
+	max-width: 100%;
+	overflow: hidden;
+}
 .main-tittle_block {
 	position: relative;
 	width: 500.31px;
@@ -9,23 +12,72 @@
 	margin-top: 9px;
 	text-align: center;
 	z-index: 500;
-	padding: 76px 0px 0px 0px;
-	margin-bottom: 243px;
+	padding-bottom: 243px;
 
-	&:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: -14.698925%;
-		width: 465px;
-		height: 465px;
-		background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-		border-radius: 50%;
-		z-index: -1;
+	@include small-desktop {
+		width: 400.25px;
+		margin-top: 0px;
+		padding-bottom: 147px;
+	}
+	@include tablet {
+		width: 100%;
+		margin-left: 0;
+		padding-bottom: 40px;
+		// margin-left: auto;
+		// margin-right: 0px;
+		
+	}
+	@include mobile {
+		padding-bottom: 0
+	}
+	.title-wrapper {
+		padding: 76px 0px 58px;
+		position: relative;
+		@include small-desktop {
+			padding: 42.8px 0px 40.2px;
+		}
+		@include tablet {
+			padding: 48px 0px 0px;
+			width: 255.64px;
+			font-size: 54.2894px;
+			line-height: 75%;
+			margin-left: auto;
+			margin-right: 0px;
+		}
+		@include mobile {
+			padding: 41px 0px 68.43px;
+			width: 128.13px;
+			font-size: 28px;
+			line-height: 75%;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -14.698925%;
+			width: 465px;
+			height: 465px;
+			background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+			border-radius: 50%;
+			z-index: -1;
+	
+			@include small-desktop {
+				width: 367px;
+				height: 367px;
+				top: -10px;
+			}
+			@include tablet {
+				width: 237.6px;
+				height: 237.6px;
+			}
+			@include mobile {
+				width: 119.09px;
+				height: 119.09px;
+			}
+		}
 	}
 
 	.main-title {
-		margin: 0px 0px 58px;
 		font-style: normal;
 		font-weight: 700;
 		font-size: 106.496px;
@@ -33,21 +85,53 @@
 		text-align: center;
 		text-transform: uppercase;
 		color: #FFFFFF;
+		white-space: pre-line;
+
+		@include small-desktop {
+			font-size: 85px;
+			line-height: 75%;
+		}
+		@include tablet {
+			font-size: 54.2894px;
+			line-height: 75%;
+		}
+		@include mobile {
+			font-size: 28px;
+			line-height: 75%;
+		}
 
 		span {
 			color: #FFEE2E;
 		}
+
+		
+	}
+	.watch-button {
+		margin: 0 auto;
+
+		@include tablet {
+			margin-left: 0;
+			margin-right: auto;
+			text-align: left;
+		}
+		
 	}
 
-	button {
-		margin: 0 auto;
-	}
 }
 
 
 .backstage {
 	position: relative;
-	margin-bottom: 175px;
+	padding-bottom: 175px;
+	@include small-desktop {
+		padding-bottom: 142px;
+	}
+	@include tablet {
+		padding-bottom: 80px;
+	}
+	@include mobile {
+		padding-bottom: 40px;
+	}
 	&:after {
 		content: "";
 		height: 605px;
@@ -58,21 +142,55 @@
 		background: url("../../assets/images/flower_foto1.png") no-repeat center;
 		z-index: -1;
 		// transform: translateX(20%);
+		@include small-desktop {
+			display: none;
+		}
 	}
 
 	.wrapper {
-		margin-left: 219px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 86px;
+		@include small-desktop {
+			
+			grid-column-gap: 31px;
+		}
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
 	}
 
+	picture {
+		display: block;
+		width: 609px;
+		height: 403px;
+		@include small-desktop {
+			width: 455px;
+			height: 408px;
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
+		@include tablet {
+			display: none;
+		}
+	}
 	h2 {
-		margin: 0 0 20px;
+		padding: 0 0 20px;
+		@include mobile {
+			padding: 0 0 10px;
+		}
 	}
 
 	h4 {
-		margin: 54px 0px 34px;
+		padding: 54px 0px 34px;
+		@include tablet {
+			padding: 25px 0;
+		}
+		@include mobile {
+			padding: 20px 0 10px;
+		}
 	}
 
 	p {
@@ -119,6 +237,12 @@
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 82px;
+	@include small-desktop {
+		grid-template-columns: 1fr;
+	}
+	.big {
+		display: none;
+	}
 
 
 	.slider-button {
@@ -173,13 +297,24 @@
 	}
 
 	.animals-blocks {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+
+		display: flex;
+		// grid-template-columns: 1fr;
+		// grid-template-rows: min-content min-content min-content;
+		grid-template-rows: 1fr 1fr 1fr;
 		grid-column-gap: 28px;
 		grid-row-gap: 20px;
 		align-items: center;
+		>* {
+			width: 100%;
+		}
 
-
+		.slider-buttons{
+			display: none;
+			@include small-desktop{
+				display: block;
+			}
+		}
 		.card {
 			border: 1px solid $orange;
 			border-radius: 5px;

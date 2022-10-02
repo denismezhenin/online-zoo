@@ -178,6 +178,7 @@
 						&:after {
 							content: "";
 							position: absolute;
+							left: -3px;
 							top: 15.5px;
 							width: 10px;
 							height: 10px;
@@ -199,7 +200,7 @@
 						}
 
 						.radio-button {
-							margin-left: -15px;
+							margin-left: -18px;
 							appearance: none;
 							width: 40px;
 							height: 40px;
@@ -216,7 +217,7 @@
 							width: 20px;
 						}
 						label {
-							margin-top: 9px;
+							margin-top: -5px;
 							margin-left: -17px;
 							font-weight: 500;
 							font-size: 26px;

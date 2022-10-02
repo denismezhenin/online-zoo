@@ -312,13 +312,13 @@ template {
 }
 
 body {
-  width: 1600px;
+  max-width: 1600px;
   min-height: 100vh;
   margin: 0 auto;
 }
 
 a {
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 a:hover {
@@ -332,7 +332,23 @@ html {
 }
 
 .wrapper {
-  margin: 0 220px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+@media (max-width: 1599px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 999px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 639px) {
+  .wrapper {
+    padding: 0 10px;
+  }
 }
 
 /**
@@ -377,6 +393,11 @@ h2 {
   font-size: 48px;
   line-height: 120%;
 }
+@media (max-width: 639px) {
+  h2 {
+    font-size: 24x;
+  }
+}
 
 h3 {
   font-family: "Roboto";
@@ -384,6 +405,12 @@ h3 {
   font-weight: 400;
   font-size: 36px;
   line-height: 130%;
+}
+@media (max-width: 639px) {
+  h3 {
+    font-size: 24x;
+    line-height: 120%;
+  }
 }
 
 h4 {
@@ -422,7 +449,7 @@ header {
   position: relative;
   z-index: 100;
 }
-header .fhone {
+header .background {
   background: #000000;
 }
 header:after {
@@ -435,23 +462,106 @@ header:after {
   background: url("../../assets/images/Giant_Panda.png") no-repeat center;
   z-index: -1;
 }
+@media (max-width: 1599px) {
+  header:after {
+    height: 584px;
+  }
+}
+@media (max-width: 999px) {
+  header:after {
+    height: 373px;
+  }
+}
+@media (max-width: 639px) {
+  header:after {
+    height: 186.96px;
+  }
+}
 
 .header {
+  padding: 17px 0px 12px;
   display: grid;
   grid-template-columns: -webkit-min-content auto -webkit-min-content;
   grid-template-columns: min-content auto min-content;
   align-items: center;
 }
+@media (max-width: 1599px) {
+  .header {
+    padding: 14px 0;
+  }
+}
+@media (max-width: 999px) {
+  .header {
+    padding: 2.29px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header .hamburger {
+  display: none;
+  position: relative;
+  width: 18px;
+  height: 10px;
+}
+@media (max-width: 999px) {
+  .header .hamburger {
+    margin: 0;
+    display: inline-block;
+    justify-self: end;
+  }
+}
+.header .hamburger .hamburger-line {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
+.header .hamburger:after {
+  background-color: #FFFFFF;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+}
+.header .hamburger:before {
+  background-color: #FFFFFF;
+  position: absolute;
+  content: "";
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+}
 .header .logo_wrapper {
-  margin: 17px 0px 12px 0px;
   position: relative;
   width: 82px;
-  height: 52px;
   font-weight: 400;
   font-size: 19.0145px;
   line-height: 120%;
   text-align: center;
   border: 1.18841px solid #FFFFFF;
+}
+.header .logo_wrapper h1 {
+  display: none;
+}
+@media (max-width: 999px) {
+  .header .logo_wrapper {
+    width: 46.86px;
+    height: 29.03px;
+    margin: 0;
+    font-size: 12.2899px;
+    border: none;
+  }
+}
+.header .logo {
+  display: inline-block;
 }
 .header .logo .logo_bamboo {
   display: block;
@@ -465,6 +575,11 @@ header:after {
   background-repeat: no-repeat;
   scale: 1.7;
 }
+@media (max-width: 999px) {
+  .header .designed-link {
+    display: none;
+  }
+}
 .header .designed-link a {
   white-space: nowrap;
 }
@@ -472,6 +587,11 @@ header:after {
   justify-self: start;
   margin: 0;
   margin-left: 63px;
+}
+@media (max-width: 999px) {
+  .header .nav_block {
+    display: none;
+  }
 }
 .header .navigation {
   display: flex;
@@ -547,6 +667,7 @@ header:after {
   text-decoration: none;
   list-style: none;
   margin: 0px;
+  transition: all 0.9s;
 }
 .footer .wrapper .navigation .nav-item {
   padding-right: 58px;
@@ -555,6 +676,7 @@ header:after {
   padding-right: 0px;
 }
 .footer .wrapper .navigation .nav-link:hover {
+  transition: all 0.9s;
   color: #F9804B;
 }
 .footer .wrapper .navigation .first {
@@ -648,6 +770,7 @@ header:after {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border-radius: 25px;
   border: none;
+  color: white;
   transition: 0.3s;
 }
 .oval-button:hover {
@@ -661,6 +784,7 @@ header:after {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border-radius: 5px;
   border: none;
+  color: white;
   transition: 0.3s;
 }
 .square-button:hover {
@@ -822,6 +946,7 @@ header:after {
 .donation .donate-wrapper .amount-range .range-container .amount li:after {
   content: "";
   position: absolute;
+  left: -3px;
   top: 15.5px;
   width: 10px;
   height: 10px;
@@ -840,7 +965,7 @@ header:after {
   background: url("../../assets/images/input-checked.svg") no-repeat center;
 }
 .donation .donate-wrapper .amount-range .range-container .amount li .radio-button {
-  margin-left: -15px;
+  margin-left: -18px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -854,7 +979,7 @@ header:after {
   width: 20px;
 }
 .donation .donate-wrapper .amount-range .range-container .amount li label {
-  margin-top: 9px;
+  margin-top: -5px;
   margin-left: -17px;
   font-weight: 500;
   font-size: 26px;

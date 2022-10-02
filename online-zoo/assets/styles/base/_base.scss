@@ -10,12 +10,12 @@
   padding: 0;
  }
  body {
-	width: 1600px;
+	max-width: 1600px;
 	min-height: 100vh;
   margin: 0 auto;
 }
 a {
-  transition: 0.4s;
+  transition: 0.3s;
 }
 a:hover {
   cursor: pointer;
@@ -29,7 +29,18 @@ html {
 
 
 .wrapper {
-  margin: 0 220px;
+  max-width: $wrapper-width;
+  margin: 0 auto;
+  @include small-desktop {
+    padding: 0 20px;
+  }
+  @include tablet {
+    padding: 0 20px;
+  }
+  @include mobile {
+    padding: 0 10px;
+  }
+
 }
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
