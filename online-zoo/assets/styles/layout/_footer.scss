@@ -4,6 +4,16 @@
 .footer {
 	background-color: black;
 	padding: 40px 0px 50px 0px;
+
+	@include small-desktop {
+		padding: 41px 0 40px;
+	}
+	@include tablet {
+		padding: 12px 0;
+	}
+	@include mobile {
+		padding: 20px 0;
+	}
 	.wrapper {
 		display: grid;
 		grid-template-areas: 
@@ -17,6 +27,30 @@
 		// align-items: start;
 		// align-content: start;
 
+		@include small-desktop {
+			grid-template-columns: auto auto auto;
+			grid-template-areas: 
+			'logo form form'
+			'button . .'
+			'social nav design';
+		}
+		@include tablet {
+			grid-template-columns: auto auto auto;
+			grid-template-areas: 
+			'logo . social'
+			'button . social'
+			'nav nav design';
+		}
+		@include mobile {
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			'logo'
+			'social'
+			'button'
+			'design'
+			'nav'; 
+		}
+
 		.logo_wrapper {
 			grid-area: logo;
 			margin: 4px 0px 69px 0px;
@@ -28,6 +62,19 @@
 			line-height: 120%;
 			text-align: center;
 			border: 1.18841px solid #FFFFFF;
+			@include small-desktop {
+				margin: 0px 0px 69px 0px;
+			}
+
+			@include tablet {
+				margin-bottom: -57px;
+			}
+			@include mobile {
+				border: none;
+				height: auto;
+				width: 100%;
+				margin-bottom: 0px;
+			}
 		}
 		.logo {
 			.logo_bamboo {
@@ -41,13 +88,25 @@
 				background-size: contain;
 				background-repeat: no-repeat;
 				scale: 1.7;
+				@include mobile {
+					bottom: 0;
+					left: 53%
+				}
 			}
 		}
 
-		form, .button {
+		form, button {
 			grid-area: button;
 			margin-left: 0;
 			margin-bottom: -2px;
+			height: 54px;
+			@include tablet {
+				margin-bottom: -24px;
+			}
+			@include mobile {
+				display: block;
+				margin: 0 auto;
+			}
 		}
 
 		.nav {
@@ -62,12 +121,26 @@
 			list-style: none;
 			margin: 0px;
 			transition: all 0.9s;
+			@include mobile {
+				justify-content: space-between;
+			}
 			.nav-item {
-				
+				white-space: nowrap;
 				padding-right: 58px;
+				@include small-desktop {
+					padding-right: 45px;
+				}
+				@include tablet {
+					padding-right: 37px;
+				}
+				@include mobile {
+					padding-top: 30px;
+					padding-right: 32px;
+				}
 				&:last-child {
 					padding-right: 0px;
 				}
+
 			}
 
 			.nav-link:hover  {
@@ -96,8 +169,34 @@
 		// align-content: flex-start;
 		// align-items: flex-start;
 		margin: 0px;
-		margin-top: 36px;
+		padding-top: 36px;
 		// text-align: right;
+		list-style: none;
+
+		@include small-desktop {
+			padding-top: 43px;
+		}
+		@include  tablet{
+			justify-self: end;
+			padding-top: 0px;
+			padding-bottom: 26px;
+			margin-right: -15px;
+			// display: flex;
+			// flex-direction: column;
+			// justify-content: center;
+			// align-items: center;
+		}
+		@include  mobile{
+			justify-self: center;
+			display: flex;
+			padding-bottom: 30px;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			@include mobile {
+				padding-bottom: 24px;
+			}
+		}
 
 		li {
 			margin-top: 8.5px;
@@ -105,6 +204,30 @@
 			// justify-content: flex-start;
 			// align-content: flex-start;
 			// align-items: flex-start;
+			@include tablet {
+				margin-top: 14px;
+				// justify-self: flex-end;
+				// align-self: flex-end;
+			}
+			@include mobile {
+				justify-self: center;
+				margin-top: 32px;
+				margin-right: 10px;
+			}
+			&:first-child {
+				margin-top: 0px;
+				@include tablet {
+					margin-top: 0px;
+				}
+				@include mobile {
+					margin-top: 32px;
+				}
+			}
+			a {
+				@include tablet {
+					font-size: 0;
+				} 
+			}
 		}
 		.social-logo_wrapper {
 			display: inline-flex;
@@ -145,6 +268,9 @@
 		color: white;
 		grid-area: design;
 		text-align: right;
+		@include mobile {
+			padding: 19px 0px 0px;
+		}
 
 		p {
 			display: inline-block;
@@ -157,6 +283,16 @@
 	.subscripe-form {
 		margin-left: 18px;
 		grid-area: form;
+		justify-self: end;
+		@include small-desktop {
+			padding-right: 0px;
+			margin: 0 -20px 0 0;
+			justify-self: end;
+		}
+
+		@include tablet {
+			display: none;
+		}
 
 		h4 {
 			color: #FFFFFF;

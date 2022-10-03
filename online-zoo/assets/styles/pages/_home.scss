@@ -1,6 +1,38 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.watch-animal {
+	overflow: hidden;
+
+	@include tablet {
+		margin-top: 34px;
+	}
+	@include tablet {
+		margin-top: 34px;
+	}
+	&:after {
+		content: "";
+		height: 780px;
+		width: 100%; 
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: url("../../assets/images/Giant_Panda.png") no-repeat center;
+		background-size: cover;
+		z-index: -1;
+
+		@include small-desktop {
+			height: 584px;
+		}
+
+		@include tablet {
+			height: 373px;
+		}
+		@include mobile {
+			height: 221px;
+		}
+	}
+}
 .watch-wrapper {
 	max-width: 100%;
 	overflow: hidden;
@@ -11,18 +43,19 @@
 	margin-left: 55%;
 	margin-top: 9px;
 	text-align: center;
-	z-index: 500;
+	z-index: 100;
 	padding-bottom: 243px;
 
 	@include small-desktop {
 		width: 400.25px;
 		margin-top: 0px;
 		padding-bottom: 147px;
+		margin-left: 51.4%;
 	}
 	@include tablet {
 		width: 100%;
 		margin-left: 0;
-		padding-bottom: 40px;
+		padding-bottom: 45px;
 		// margin-left: auto;
 		// margin-right: 0px;
 		
@@ -69,8 +102,10 @@
 			@include tablet {
 				width: 237.6px;
 				height: 237.6px;
+				top: 10px;
 			}
 			@include mobile {
+				top: 21px;
 				width: 119.09px;
 				height: 119.09px;
 			}
@@ -110,11 +145,25 @@
 		margin: 0 auto;
 
 		@include tablet {
+			margin-top: -6px;
 			margin-left: 0;
 			margin-right: auto;
 			text-align: left;
 		}
+
+		button {
+			@include mobile {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
 		
+	}
+	.backstage-picture {
+		object-fit: cover;
+		// width: 455px;
+		// height: 408px;
 	}
 
 }
@@ -123,13 +172,16 @@
 .backstage {
 	position: relative;
 	padding-bottom: 175px;
+	overflow: hidden;
 	@include small-desktop {
 		padding-bottom: 142px;
 	}
 	@include tablet {
+		padding-top: 55px;
 		padding-bottom: 80px;
 	}
 	@include mobile {
+		padding-top: 27px;
 		padding-bottom: 40px;
 	}
 	&:after {
@@ -144,6 +196,20 @@
 		// transform: translateX(20%);
 		@include small-desktop {
 			display: none;
+		}
+		@include tablet {
+			background: url("../../assets/images/flower_foto1_sm.png") no-repeat center;
+			top: -5px;
+			display: block;
+			height: 476px;
+			width: 231px; 
+			right: -51px;
+		}
+		@include mobile {
+			top: -34px;
+			width: 105px;
+			height: 217px;
+			background-size: contain;
 		}
 	}
 
@@ -165,8 +231,10 @@
 		width: 609px;
 		height: 403px;
 		@include small-desktop {
+			// object-fit: fill;
+			padding-top: 9px;
 			width: 455px;
-			height: 408px;
+			height: 100%;
 		}
 		img {
 			display: block;
@@ -175,6 +243,15 @@
 		@include tablet {
 			display: none;
 		}
+	}
+	.backstage_description {
+		@include tablet {
+			padding-right: 109px;
+		}
+		@include mobile {
+			padding-right: 0px;
+		}
+		
 	}
 	h2 {
 		padding: 0 0 20px;
@@ -186,20 +263,20 @@
 	h4 {
 		padding: 54px 0px 34px;
 		@include tablet {
-			padding: 25px 0;
+			padding: 28px 0 20px;
 		}
 		@include mobile {
-			padding: 20px 0 10px;
+			padding: 16px 0 10px;
 		}
 	}
 
 	p {
 		font-weight: 400;
 	}
-	
 }
 
 .animals {
+	overflow: hidden;
 	position: relative;
 	text-align: center;
 	padding-bottom: 100px;
@@ -234,6 +311,8 @@
 			height: 131px;
 		}
 		@include mobile {
+			right: -12px;
+			bottom: -3px;
 			width: 85px;
 			height: 71px;
 		}
@@ -250,15 +329,19 @@
 		background-size: contain;
 		z-index: -1;
 		@include small-desktop {
-			width: 194px;
+			width: 186px;
 			height: 202px;
+			background: url("../../assets/images/palm_foto_sm.png") no-repeat center;
+			left: 0px;
 		}
 		@include tablet {
 			width: 134px;
 			height: 202px;
+			left: -27px;
 		}
 		@include mobile {
-			width: 58px;
+			background-size: contain;
+			width: 105px;
 			height: 72px;
 		}
 	}
@@ -278,7 +361,7 @@
 		grid-template-columns: 1fr;
 	}
 	@include tablet {
-		margin-bottom: 100px;
+		margin-bottom: 60px;
 	}
 	@include mobile {
 		margin-bottom: 20px;
@@ -368,6 +451,9 @@
 		// >* {
 		// 	width: 100%;
 		// }
+		@include small-desktop {
+			grid-row-gap: 11px ;
+		}
 		@include tablet {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -382,18 +468,8 @@
 				display: block;
 				grid-column-start: 1;
 				grid-column-end: 4;
-				// width: 200px;
-				// height: 200px;
-				// >* {
-				// 	display: inline-block;
-				// }
-				// .slider-button {
-				// 	display: inline-block;
-				// }
-				// .slider-button {
-				// 	@include small-desktop {
-				// 		display: inline-block;
-				// 	}
+
+				
 				}
 				@include tablet {
 					grid-column-start: 1;
@@ -402,62 +478,14 @@
 				@include mobile {
 					display: none;
 				}
-				// .slider-button2 {
-				// 	display: inline-block;
-				// 	position: relative;
-				// 	justify-self: right;
-				// 	text-align: right;
-				// 	content: "";
-				// 	width: 62px;
-				// 	height: 62px;
-				// 	color: white;
-				// 	background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-				// 	border-radius: 50%;
-				// 	// @include small-desktop {
-				// 	// 	display: none;
-				// 	// }
-						
-					
-					
-			
-				// 	&:hover {
-				// 		cursor: pointer;
-				// 		background: $green;
-				// 	}
-				
-				// }
-			
-				// .prev2 {
-				// 	justify-self: right;
-				// 	text-align: right;
-				// }
-			
-				// .prev2:after {
-				// 	position: absolute;
-				// 	content: "";
-				// 		width: 16px;	
-				// 		height: 8px;
-				// 		top: 43.5%;
-				// 		left: 37.1%;
-				// 		color: white;
-				// 		background: #FFFFFF;
-				// 		// border: 0.3px solid #FFFFFF;
-				// 		background: url("../../assets/images/prev.svg") no-repeat center;
-				// }
-			
-				// .next2:after {
-				// 	position: absolute;
-				// 	content: "";
-				// 		width: 16px;	
-				// 		height: 8px;
-				// 		top: 43.5%;
-				// 		left: 37.1%;
-				// 		color: white;
-				// 		background: #FFFFFF;
-				// 		// border: 0.3px solid #FFFFFF;
-				// 		background: url("../../assets/images/prev.svg") no-repeat center;
-				// 		transform: rotate(180deg);
-				// }
+				.small:last-child {
+					@include small-desktop {
+						margin-left: 166px;
+					}
+					@include tablet {
+						margin-left: 26px;
+					}
+				}
 			}
 
 		// }
@@ -472,6 +500,11 @@
 			}
 			@include tablet{
 				height: 332px;
+			}
+			&:nth-child(3n) {
+				@include tablet {
+					display: none;
+				}
 			}
 
 
@@ -500,6 +533,9 @@
 			.animal-description {
 				transition: transform 0.4s;
 				z-index: -1;
+				@include tablet {
+					margin-top: -5px;
+				}
 			}
 
 			&:hover {
@@ -520,6 +556,7 @@
 			}
 			.animal-name {
 				text-transform: uppercase;
+				display: block;
 				@include tablet {
 					font-size: 12.4695px;
 				}
@@ -553,6 +590,10 @@
 					// background: #FFFFFF;
 					// border: 0.3px solid #FFFFFF;
 					background: url("../../assets/images/bananbamboo.svg") no-repeat center;
+					@include tablet {
+						width: 25.72px;
+						height: 28.84px;
+					}
 					
 			}
 			.meat:after {
@@ -566,7 +607,10 @@
 					// background: #FFFFFF;
 					// border: 0.3px solid #FFFFFF;
 					background: url("../../assets/images/meet-fish_icon.svg") no-repeat center;
-					
+					@include tablet {
+						width: 37.41px;
+						height: 29.62px;
+					}
 			}
 		}
 		// .animal-image {
@@ -601,10 +645,10 @@ opacity: 0.9;
 		@include small-desktop {
 			padding: 30px 48px 50px;
 		  }
-		  @include tablet {
-			padding: 10 20px 0px;
+		@include tablet {
+			padding: 11px 20px 61px;
 		  }
-		  @include mobile {
+		 @include mobile {
 			padding: 20px 0px 40px;
 		  }
 
@@ -612,7 +656,22 @@ opacity: 0.9;
 		h2 {
 			margin: 0px 0 30px;
 			text-align: center;
-			color: #FE9013
+			color: #FE9013;
+			@include small-desktop {
+				margin: 0px 0 21px
+			}
+			@include tablet {
+				font-weight: 400;
+				font-size: 42px;
+				line-height: 120%;
+				margin: 0px 0 21px
+			}
+			@include mobile {
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 120%;
+				margin: 0px 0 10px
+			}
 		}
 
 		h4, p {
@@ -622,7 +681,18 @@ opacity: 0.9;
 				margin-left: 0px;
 			}
 		}
-
+		h4 {
+			@include tablet {
+				font-weight: 400;
+				font-size: 22px;
+				line-height: 120%;
+			}
+			@include mobile {
+				font-size: 18px;
+				line-height: 120%;
+				text-align: center;
+			}
+		}
 		p {
 			margin-right: 198px;
 
@@ -653,6 +723,15 @@ opacity: 0.9;
 				margin: 0;
 				padding: 20px 0px 10px;
 			}
+			@include tablet{
+				margin: 0;
+				padding: 16px 0px 10px;
+			}
+			@include mobile {
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 120%;
+			}
 		}
 		h3 {
 			padding: 60px 0px 40px;
@@ -662,7 +741,7 @@ opacity: 0.9;
 				padding: 40px;
 			  }
 			  @include tablet {
-				padding: 20px 0px 30px;
+				padding: 27px 0px 22px;
 			  }
 			  @include mobile {
 				padding: 20px;
@@ -681,18 +760,25 @@ opacity: 0.9;
 				padding: 0 0 70px;
 			  }
 			  @include tablet {
+				grid-template-columns: 1fr 1fr 1fr;
 				padding: 0 0 40px;
 			  }
 			  @include mobile {
-				padding: 0 0 39px;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+				grid-gap: 20px;
+				padding: 0 0 44px;
 			  }
 
 			.ways_card {
 				width: 168px;
+				display: relative;
 				p {
 					margin-left: 0px;
 					margin-right: 0px;
+					display: block;
 				}
+
 			}
 			.ways-block {
 				width: 168px;
@@ -702,6 +788,10 @@ opacity: 0.9;
 				position: relative;
 				margin-bottom: 30px;
 
+
+				@include tablet {
+					margin-bottom: 30px;
+				}
 				@include mobile {
 					margin-bottom: 10px;
 				}
@@ -713,9 +803,7 @@ opacity: 0.9;
 				background: url("../../assets/images/arrow.svg") no-repeat;
 				align-self: center;
 				@include tablet {
-					background: url("../../assets/images/arrow-green.svg") no-repeat;
-					width: 63.12px;
-					height: 69.66px;
+					display: none;
 				}
 			}
 
@@ -738,6 +826,25 @@ opacity: 0.9;
 				left: 41.23px;
 				background: url("../../assets/images/tree.svg") no-repeat center;
 			}
+			.arrowed:before {
+				
+					@include tablet{
+							position: absolute;
+							content: "";
+							width: 93.12px;
+							height: 69.66px;
+							top: -21%;
+							left: 77%;
+							background: url("../../assets/images/arrow-green.svg") no-repeat center;
+					}
+					@include mobile{
+
+							top: 102%;
+							left: 83%;
+							transform: rotate(80deg);
+					}
+			}
+
 			.monkey::after {
 				position: absolute;
 				content: "";
@@ -761,6 +868,7 @@ opacity: 0.9;
 .testimonials {
 	padding: 140px 0px 177px;
 	position: relative;
+	overflow: hidden;
 	@include small-desktop {
 		padding: 100px 0px 140px;
 	  }
@@ -784,16 +892,22 @@ opacity: 0.9;
 		background-size: contain;
 		z-index: -1;
 		@include small-desktop {
+			scale: 1.35;
 			width: 239.98px;
 			height: 235.62px;
+			bottom: 22px;
+			right: -22px;
 		}
 		@include tablet {
 			width: 149.88px;
 			height: 147.15px;
+			bottom: 0px;
 		}
 		@include mobile {
 			width: 77.21px;
 			height: 75.81px;
+			bottom: -5px;
+			right: -7px;
 		}
 		// transform: matrix(-0.86, -0.5, -0.5, 0.86, 0, 0)
 	}
@@ -818,6 +932,7 @@ opacity: 0.9;
 
 		@include small-desktop {
 			grid-template-columns: repeat(3, 1fr);
+			padding-bottom: 12px;
 		}
 		@include tablet {
 			padding-bottom: 40px;
@@ -837,13 +952,16 @@ opacity: 0.9;
 			border-radius: 20px;
 			
 			@include small-desktop {
-				padding: 15px 16px 40px 16px;
+				padding: 12px 16px 36px 16px;
 			}
 			@include tablet {
-				padding: 15px 29px 8px 12px;
+				padding: 13px 29px 8px 12px;
 			}
 			@include mobile {
 				padding: 10px 29px 12px 12px;
+			}
+			&:last-child {
+				display: none;
 			}
 
 			&:before {
@@ -910,7 +1028,7 @@ opacity: 0.9;
 			.user-information {
 				margin: 0px 0px 11px 10px;
 				@include small-desktop {
-					margin: 0px 0px 17px 6px;
+					margin: 0px 0px 12px 6px;
 				}
 				@include tablet {
 					margin: 0px 0px 10px 10px;
@@ -926,6 +1044,10 @@ opacity: 0.9;
 
 	.rangecontainer {
 		width: 599px;
+		@include small-desktop {
+			width: 390px;
+			padding-bottom: 20px;
+		}
 		@include tablet {
 			display: none
 		}
@@ -954,7 +1076,10 @@ opacity: 0.9;
 			height: 6px; 
 			background: #FE9013;
 			cursor: pointer; 
-			border-radius: 5px
+			border-radius: 5px;
+			@include small-desktop {
+				width: 75px; 
+			}
 		  }
 		  
 		  &::-moz-range-thumb {
@@ -962,7 +1087,17 @@ opacity: 0.9;
 			height: 6px; 
 			background: #FE9013;
 			cursor: pointer; 
-			border-radius: 5px
+			border-radius: 5px;
+			@include small-desktop {
+				width: 75px; 
+			}
+		  }
+	  }
+	  button {
+		  @include tablet {
+			  display: block;
+			  margin: 0 auto;
+			  width: 240px;
 		  }
 	  }
 }
