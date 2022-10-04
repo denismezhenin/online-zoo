@@ -891,7 +891,7 @@ header .background {
 }
 @media (max-width: 1599px) {
   .footer .subscripe-form {
-    padding-right: 0px;
+    padding-right: 52px;
     margin: 0 -20px 0 0;
     justify-self: end;
   }
@@ -1010,8 +1010,8 @@ header .background {
 }
 @media screen and (max-width: 320px) {
   .watch-animal:after {
-    top: 16px;
-    background-size: contain;
+    top: 17px;
+    background-size: 120% 85%;
   }
 }
 
