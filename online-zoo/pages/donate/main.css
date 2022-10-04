@@ -973,12 +973,12 @@ header .background {
 }
 @media (max-width: 999px) {
   .background-image {
-    height: 335px;
+    height: 368px;
   }
 }
 @media (max-width: 639px) {
   .background-image {
-    height: 187px;
+    height: 222px;
   }
 }
 .background-image:after {
@@ -1001,13 +1001,15 @@ header .background {
 @media (max-width: 999px) {
   .background-image:after {
     background: url("../../assets/images/panda_bg-tablet.png") no-repeat center;
-    height: 335px;
+    height: 368px;
+    background-size: cover;
   }
 }
 @media (max-width: 639px) {
   .background-image:after {
     background: url("../../assets/images/panda_bg-mobile.jpg") no-repeat center;
-    height: 187px;
+    height: 222px;
+    background-size: cover;
   }
 }
 
