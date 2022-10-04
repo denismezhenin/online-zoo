@@ -31,9 +31,14 @@
 			height: 373px;
 		}
 		@include mobile {
+			background-size: cover;
 			height: 221px;
 		}
+		@media screen and (max-width: 320px) {
+			top: 16px;
+			background-size: contain;
 	}
+}
 }
 .watch-wrapper {
 	max-width: 100%;
@@ -836,12 +841,12 @@ opacity: 0.9;
 							width: 93.12px;
 							height: 69.66px;
 							top: -21%;
-							left: 77%;
+							left: -48%;
 							background: url("../../assets/images/arrow-green.svg") no-repeat center;
 					}
 					@include mobile{
 
-							top: 102%;
+							top: -42%;
 							left: 83%;
 							transform: rotate(80deg);
 					}

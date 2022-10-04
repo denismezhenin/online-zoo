@@ -1004,7 +1004,14 @@ header .background {
 }
 @media (max-width: 639px) {
   .watch-animal:after {
+    background-size: cover;
     height: 221px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .watch-animal:after {
+    top: 16px;
+    background-size: contain;
   }
 }
 
@@ -1861,13 +1868,13 @@ header .background {
     width: 93.12px;
     height: 69.66px;
     top: -21%;
-    left: 77%;
+    left: -48%;
     background: url("../../assets/images/arrow-green.svg") no-repeat center;
   }
 }
 @media (max-width: 639px) {
   .feed .wrapper .payment-way .arrowed:before {
-    top: 102%;
+    top: -42%;
     left: 83%;
     transform: rotate(80deg);
   }

@@ -20,13 +20,16 @@
 		z-index: -1;
 
 		@include small-desktop {
+			background: url("../../assets/images/panda_bg_small-desktop.png") no-repeat center;
 			background-size: cover;
 		}
 
 		@include tablet {
+			background: url("../../assets/images/panda_bg-tablet.png") no-repeat center;
 			height: 335px;
 		}
 		@include mobile {
+			background: url("../../assets/images/panda_bg-mobile.jpg") no-repeat center;
 			height: 187px;
 		}
 	}
@@ -596,9 +599,9 @@
 			// }
 
 			header {
-				backdrop-filter: blur(2px);
-				position: relative;
-				z-index: 100;
+				// backdrop-filter: blur(2px);
+				// position: relative;
+				// z-index: 100;
 				
 				.fhone {
 					background: #000000;

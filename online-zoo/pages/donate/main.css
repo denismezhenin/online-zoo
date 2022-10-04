@@ -994,16 +994,19 @@ header .background {
 }
 @media (max-width: 1599px) {
   .background-image:after {
+    background: url("../../assets/images/panda_bg_small-desktop.png") no-repeat center;
     background-size: cover;
   }
 }
 @media (max-width: 999px) {
   .background-image:after {
+    background: url("../../assets/images/panda_bg-tablet.png") no-repeat center;
     height: 335px;
   }
 }
 @media (max-width: 639px) {
   .background-image:after {
+    background: url("../../assets/images/panda_bg-mobile.jpg") no-repeat center;
     height: 187px;
   }
 }
@@ -1633,12 +1636,6 @@ header .background {
   color: #F9804B;
 }
 
-header {
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  position: relative;
-  z-index: 100;
-}
 header .fhone {
   background: #000000;
 }
