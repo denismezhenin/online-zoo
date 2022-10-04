@@ -1,21 +1,91 @@
+.background-image {
+	position: relative;
+	width: 100%;
+	height: 390px;
+	@include tablet {
+		height: 335px;
+	}
+	@include mobile {
+		height: 187px;
+	}
+	&:after {
+		content: "";
+		height: 390px;
+		width: 100%; 
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: url("../../assets/images/panda_bg_small.png") no-repeat center;
+		background-size: contain;
+		z-index: -1;
+
+		@include small-desktop {
+			background-size: cover;
+		}
+
+		@include tablet {
+			height: 335px;
+		}
+		@include mobile {
+			height: 187px;
+		}
+	}
+}
 .donation {
 	background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 	padding: 40px 0px 172px 0px;
-	margin-top: 385px;
-	.wrapper {
+	@include small-desktop {
+		padding: 40px 30px 30px;
+	}
+	@include tablet {
+		padding: 29px 20px 44px;
+	}
+	@include mobile {
+		padding: 29px 10px 18px;
+	}
+	
+	.wrapper-text {
+		max-width: 1160px;
 		.colored {
 			color: #FFFFFF;
 			white-space: nowrap;
 			letter-spacing: -1px;
+			@include small-desktop {
+				// letter-spacing: 0px;
+				white-space:unset;
+			}
+			@include tablet {
+				font-size: 24px;
+				line-height: 120%;
+			}
 		}
 		p {
 			margin: 10px 0px 44px 0px;	
-			color: #FFFFFF
+			color: #FFFFFF;
+			@include small-desktop {
+				padding: 20px 0px 0px;
+			}
+			@include tablet {
+				margin: 0;
+				padding: 20px 0px 30px;
+			}
+			@include mobile {
+				padding: 20px 0px 30px;
+			}
 		}
 		.colored-orange {
-			margin-bottom: 60px;
+			padding-bottom: 60px;
 			color: #FE9013;
 			letter-spacing: 1.5px;
+			@include small-desktop {
+				padding-bottom: 40px;
+			}
+			@include tablet {
+				padding-bottom: 30px;
+			}
+			@include mobile {
+				padding-bottom: 30px;
+			}
 		}
 	}
 
@@ -24,32 +94,84 @@
 		background: rgba(255, 255, 255, 0.52);
 		backdrop-filter: blur(2px);
 		border-radius: 20px;
+		@include small-desktop {
+			padding: 21px 32px 31px 46px;
+		}
+		@include tablet {
+			padding: 27px 0px 21px;
+		}
+		@include mobile {
+			padding: 20px 0px 13px;
+		}
 
 		h2 {
 			text-align: center;
 			color: #FE9013;
-			margin-bottom: 20px;
+			padding-bottom: 20px;
 			margin-left: -10px;
 			letter-spacing: 2px;
+			@include small-desktop {
+				padding-bottom: 10px;
+			}
+			@include tablet {
+				padding-bottom: 20px;
+			}
+			@include mobile {
+				padding-bottom: 10px;
+			}
 		}
 
 		h4 {
-			margin-bottom: 59px;
+			padding-bottom: 59px;
 			letter-spacing: 0.8px;
+			@include small-desktop {
+				padding-bottom: 59px;
+			}
+			@include tablet {
+				text-align: center;
+				padding-bottom: 50px;
+			}
+			@include mobile {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 140%;
+				padding-bottom: 10px;
+			}
 		}
 
 		.money-amount {
-			margin-bottom: 25px;
+		
 			background-color: transparent;
 			border: 1px solid #929699;
 			border-radius: 2px;
 		}
-
-		.pereodicity {
+		.select-pereodicity {
 			margin-bottom: 31px;
+			@include small-desktop {
+				margin-bottom: 29px;
+			}
+			@include tablet {
+				margin-bottom: 29px;
+			}
+			@include mobile {
+				margin-bottom: 27px;
+			}
 		}
+
+		// .pereodicity {
+			
+		// }
 		button {
 			margin-bottom: 22px;
+			@include small-desktop {
+				margin-bottom: 30px;
+			}
+			@include tablet {
+				margin-bottom: 30px;
+			}
+			@include mobile {
+				margin-bottom: 30px;
+			}
 		}
 
 		p {
@@ -62,14 +184,37 @@
 			justify-content: center;
 			justify-items: center;
 			align-items: center;
-			margin-bottom:37px;
+			padding-bottom: 37px;
+			@include small-desktop {
+				padding-bottom: 48px;
+			}
+			@include tablet {
+				padding-bottom: 41px;
+			}
+			@include mobile {
+				padding-bottom: 4px;
+			}
 
 			.multiple {
 				position: relative;
 				margin-top: 27px;
 				margin-right: 64px;
+				@include mobile {
+					margin-top: 15px;
+					margin-right: 38px;
+				}
 				img {
 					display: block;
+					@include mobile {
+						width: 7.89px;
+						height: 7.89px;
+					}
+				}
+			}
+			.panda-pic {
+				@include mobile {
+					width: 151.4px;
+					height: 134px;
 				}
 			}
 
@@ -82,20 +227,41 @@
 				position: absolute;
 				background: url("../../assets/images/multiple2.svg") no-repeat center;
 				// transform: rotate(1.4turn);
+				@include mobile {
+					width: 7.89px;
+					height: 7.89px;					
+				}
 			}
 
 			.multiply-amount-example {
 				justify-self: center;
 				margin-right: 0px;
 				margin-top: 95px;
+				@include small-desktop {
+					margin-top: 60px;
+				}
+				@include mobile {
+					margin-top: 25px;
+				}
 				img {
 					display: block;
 					margin-left: 48px;
+					@include mobile {
+						margin-left: 27px;
+						width: 23.12px;
+						height: 32.71px;
+					}
 				}
 
 				p {
-					margin-top: 19px;
+					padding-top: 19px;
 					white-space: nowrap;
+					@include mobile {
+						padding-top: 10px;
+						font-weight: 400;
+						font-size: 9.02255px;
+						line-height: 140%;
+					}
 				}
 			}
 		}
@@ -106,14 +272,49 @@
 			justify-content: center;
 			align-content: center;
 			align-items: center;
+			@include small-desktop {
+				width: 830px;
+				
+			}
+			@include tablet {
+				width: 600px;
+			
+			}
+			@include mobile {
+				width: 300px;
+			
+			}
 
 			p {
 				align-self: flex-start;
-				margin-left: 4px;
-				margin-bottom: 18px;
+				padding-left: 4px;
+				margin: 0;
+				padding-bottom: 18px;
+				text-align: left;
+				
+				@include small-desktop {
+					padding-left: 20px;
+					padding-bottom: 18px;
+				}
+				@include tablet {
+					padding-bottom: 10px;
+				}
+				@include mobile {
+					padding-left: 0;
+					padding-bottom: 8.5px;
+				}
 			}
 			.share {
+				display:inline-block;
 				align-self: center;
+				@include small-desktop {
+					margin: 0;
+				}
+				@include mobile {
+					white-space: nowrap;
+					text-align: center;
+				}
+				
 			}
 
 			.range-container {
@@ -137,7 +338,18 @@
 					// margin-bottom: 32px;
 					cursor: pointer;
 					z-index: 0;
-					
+					@include small-desktop {
+						width: 810px;
+						margin-left: -5px;
+					}
+					@include tablet {
+						width: 600px;
+						margin-left: 0;
+					}
+					@include mobile {
+						width: 300px;
+						height: 13.5px; 
+					}
 					&:after{
 						left: 26px;
 						top: 12.5px;
@@ -146,7 +358,20 @@
 						width: 915px;
 						height: 2px;
 						background: #72828E;
-						
+						@include small-desktop {
+							width: 785px;
+							left: 16px;
+						}
+						@include tablet {
+							width: 524px;
+							left: 35px;
+						}
+						@include mobile {
+							top: 6.25px;
+							width: 262px;
+							left: 20.5px;
+							height: 1px;
+						}
 					}
 				}
 
@@ -159,6 +384,19 @@
 					margin-top: -34px;
 					margin-bottom: 52px;
 					z-index: 100;
+
+					@include small-desktop {
+						margin-left: 10px;
+						margin-bottom: 50px;
+					}
+					@include tablet {
+						margin-left: 37px;
+						margin-bottom: 50px;
+					}
+					@include mobile {
+						margin-bottom: 25px;
+					}
+					
 
 					li {
 						position: relative;
@@ -174,6 +412,22 @@
 						text-transform: uppercase;
 						// width: 125px;
 						color: #333B41;
+						
+						@include mobile {
+							margin-right: 59px;
+							width: 1px;
+						}
+
+						&:first-child {
+							@include small-desktop {
+								display: none;
+							}
+						}
+						&:nth-child(2), &:nth-child(3) {
+							@include tablet {
+								display: none;
+							}
+						}
 
 						&:after {
 							content: "";
@@ -185,6 +439,12 @@
 							background: #FFEE2E;
 							border-radius: 50%;	
 							z-index: -1;
+							@include mobile {
+								left: -16px;
+								top: 24.5px;
+								width: 5px;
+								height: 5px;
+							}
 						}
 
 						input:checked {
@@ -215,6 +475,9 @@
 						&:last-child {
 							margin: 0;
 							width: 20px;
+							@include mobile {
+								width: 1px;
+							}
 						}
 						label {
 							margin-top: -5px;
@@ -223,6 +486,13 @@
 							font-size: 26px;
 							line-height: 140%;
 							text-transform: uppercase;
+							@include mobile {
+								margin-top: -10px;
+								margin-left: -25px;
+								font-weight: 500;
+								font-size: 13px;
+								line-height: 140%;
+							}
 						}
 					}
 				}
@@ -232,15 +502,38 @@
 				width: 268px;
 				height: 54px;
 				display: inline;
+				@include tablet {
+					width: 180px;
+					height: 42px;
+				}
 			}
 
 			.money-number {
+				margin-bottom: 25px;
 				position: relative;
 				span{
 					position: absolute;
 					top: 19%;
-					right:6px
+					right: 6px;
+					@include small-desktop {
+						top: 32%;
+						right: 17px;
+					}
+					@include mobile {
+						top: 27%;
+						right: 11px;
+					}
 				  }
+				  
+					@include small-desktop {
+						margin-bottom: 25px;
+					}
+					@include tablet {
+						margin-bottom: 31px;
+					}
+					@include mobile {
+						margin-bottom: 25px;
+					}
 			}
 
 			  form {
@@ -258,6 +551,12 @@
 				margin-right: 10px;
 				margin-top: 2px;
 				margin-left: 20px;
+				@include small-desktop {
+					margin-left: 8px;
+				}
+				@include tablet {
+					margin-left: 19px;
+				}
 			}
 	
 			.pereodicity:checked {
@@ -305,16 +604,7 @@
 					background: #000000;
 				}
 			
-				&:after {
-					content: "";
-					height: 390px;
-					width: 100%; 
-					top: 81px;
-					left: 0;
-					position: absolute;
-					background: url("../../assets/images/panda_bg_small.png") no-repeat center;
-					z-index: -1;
-				}
+
 				.nav-item:nth-child(4) {
 	
 					a {

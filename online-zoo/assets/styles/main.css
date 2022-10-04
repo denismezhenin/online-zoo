@@ -446,7 +446,6 @@ button {
 header {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  position: relative;
   z-index: 500;
 }
 @media (max-width: 999px) {
@@ -2005,8 +2004,10 @@ header .background {
     padding: 10px 29px 12px 12px;
   }
 }
-.testimonials .testers-reviews .testimonials-card:last-child {
-  display: none;
+@media (max-width: 1599px) {
+  .testimonials .testers-reviews .testimonials-card:last-child {
+    display: none;
+  }
 }
 .testimonials .testers-reviews .testimonials-card:before {
   content: "";

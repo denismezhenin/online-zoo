@@ -963,7 +963,10 @@ opacity: 0.9;
 				padding: 10px 29px 12px 12px;
 			}
 			&:last-child {
-				display: none;
+				@include small-desktop {
+					display: none;
+				}
+				
 			}
 
 			&:before {

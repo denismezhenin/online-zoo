@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 header {
 	backdrop-filter: blur(2px);
-	position: relative;
+	// position: relative;
 	z-index: 500;
 	@include tablet {
 		width: 100%;
