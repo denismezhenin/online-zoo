@@ -448,8 +448,8 @@
 							border-radius: 50%;	
 							z-index: -1;
 							@include mobile {
-								left: -16px;
-								top: 24.5px;
+								left: -18px;
+								top: 23.5px;
 								width: 5px;
 								height: 5px;
 							}
@@ -466,8 +466,14 @@
 							z-index: 0;
 							background: url("../../assets/images/input-checked.svg") no-repeat center;
 							@include mobile {
+								border: 7.5px solid rgba(0,0,0,0);
 								width: 20px;
 								height: 20px;	
+								background: url("../../assets/images/input-checked.svg") no-repeat center;
+								// background-size: cover;
+								// background: url("../../assets/images/roller_icon_small.svg") no-repeat center;
+								// background: url("../../assets/images/input-checked.svg") center 16px/16px no-repeat;
+								background-size: 370%;
 							}
 						}
 
@@ -484,6 +490,8 @@
 							@include mobile {
 							width: 20px;
 							height: 20px;
+							margin-top: 16px;
+							margin-left: -26px;
 							}
 
 						}
@@ -503,7 +511,7 @@
 							line-height: 140%;
 							text-transform: uppercase;
 							@include mobile {
-								margin-top: 3px;
+								margin-top: -9px;
 								margin-left: -25px;
 								font-weight: 500;
 								font-size: 13px;

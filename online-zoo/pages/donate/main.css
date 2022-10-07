@@ -1498,8 +1498,8 @@ header .background {
 }
 @media (max-width: 639px) {
   .donation .donate-wrapper .amount-range .range-container .amount li:after {
-    left: -16px;
-    top: 24.5px;
+    left: -18px;
+    top: 23.5px;
     width: 5px;
     height: 5px;
   }
@@ -1516,8 +1516,11 @@ header .background {
 }
 @media (max-width: 639px) {
   .donation .donate-wrapper .amount-range .range-container .amount li input:checked {
+    border: 7.5px solid rgba(0, 0, 0, 0);
     width: 20px;
     height: 20px;
+    background: url("../../assets/images/input-checked.svg") no-repeat center;
+    background-size: 370%;
   }
 }
 .donation .donate-wrapper .amount-range .range-container .amount li .radio-button {
@@ -1534,6 +1537,8 @@ header .background {
   .donation .donate-wrapper .amount-range .range-container .amount li .radio-button {
     width: 20px;
     height: 20px;
+    margin-top: 16px;
+    margin-left: -26px;
   }
 }
 .donation .donate-wrapper .amount-range .range-container .amount li:last-child {
@@ -1555,7 +1560,7 @@ header .background {
 }
 @media (max-width: 639px) {
   .donation .donate-wrapper .amount-range .range-container .amount li label {
-    margin-top: 3px;
+    margin-top: -9px;
     margin-left: -25px;
     font-weight: 500;
     font-size: 13px;
