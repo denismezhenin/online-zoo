@@ -180,6 +180,7 @@
 	position: relative;
 	padding-bottom: 175px;
 	overflow: hidden;
+	// padding-top: 30px;
 	@include small-desktop {
 		padding-bottom: 142px;
 	}
@@ -886,6 +887,24 @@ opacity: 0.9;
 		padding: 30px 0 60px;
 	  }
 
+	  .testers-wrapper {
+		  overflow: hidden;
+		  @include small-desktop{
+			  width: 940px;
+			  padding: 0;
+		  }
+		  @include tablet {
+			padding: 0 20px;
+			  height: 437px;
+			  width: auto;
+		  }
+		  @include mobile {
+			padding: 0 10px;
+			height: 407px;
+		  }
+
+	  }
+
 
 	&:before {
 		content: "";
@@ -933,12 +952,13 @@ opacity: 0.9;
 
 	.testers-reviews {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-column-gap: 30px;
+		grid-template-columns: repeat(11, 268px);
+		grid-column-gap: 29px;
 		padding-bottom: 17px;
+		position: relative;
 
 		@include small-desktop {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(11, 294px);
 			padding-bottom: 12px;
 		}
 		@include tablet {
@@ -1144,25 +1164,37 @@ opacity: 0.9;
 		  &::-webkit-slider-thumb {
 			-webkit-appearance: none; 
 			appearance: none;
-			width: 115.19px; 
+			width: 74.87px; 
 			height: 6px; 
 			background: #FE9013;
 			cursor: pointer; 
 			border-radius: 5px;
 			@include small-desktop {
-				width: 75px; 
+				width: 48.75px; 
 			}
 		  }
 		  
 		  &::-moz-range-thumb {
-			width: 115.19px; 
+			width: 74.87px; 
 			height: 6px; 
 			background: #FE9013;
 			cursor: pointer; 
 			border-radius: 5px;
 			@include small-desktop {
-				width: 75px; 
+				width: 48.75px; 
 			}
+		  }
+	  }
+	  .button-wrapper {
+		  @include small-desktop {
+			width: 940px;
+		  }
+		  @include tablet {
+			  width: 100%;
+			  padding-top: 40px;
+		  }
+		  @include mobile {
+			  padding-top: 30px;
 		  }
 	  }
 	  button {

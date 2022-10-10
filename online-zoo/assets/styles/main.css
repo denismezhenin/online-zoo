@@ -1987,6 +1987,28 @@ header .background_active {
     padding: 30px 0 60px;
   }
 }
+.testimonials .testers-wrapper {
+  overflow: hidden;
+}
+@media (max-width: 1599px) {
+  .testimonials .testers-wrapper {
+    width: 940px;
+    padding: 0;
+  }
+}
+@media (max-width: 999px) {
+  .testimonials .testers-wrapper {
+    padding: 0 20px;
+    height: 437px;
+    width: auto;
+  }
+}
+@media (max-width: 639px) {
+  .testimonials .testers-wrapper {
+    padding: 0 10px;
+    height: 407px;
+  }
+}
 .testimonials:before {
   content: "";
   width: 247px;
@@ -2039,13 +2061,14 @@ header .background_active {
 }
 .testimonials .testers-reviews {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 30px;
+  grid-template-columns: repeat(11, 268px);
+  grid-column-gap: 29px;
   padding-bottom: 17px;
+  position: relative;
 }
 @media (max-width: 1599px) {
   .testimonials .testers-reviews {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(11, 294px);
     padding-bottom: 12px;
   }
 }
@@ -2221,7 +2244,7 @@ header .background_active {
 .testimonials .range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 115.19px;
+  width: 74.87px;
   height: 6px;
   background: #FE9013;
   cursor: pointer;
@@ -2229,11 +2252,11 @@ header .background_active {
 }
 @media (max-width: 1599px) {
   .testimonials .range::-webkit-slider-thumb {
-    width: 75px;
+    width: 48.75px;
   }
 }
 .testimonials .range::-moz-range-thumb {
-  width: 115.19px;
+  width: 74.87px;
   height: 6px;
   background: #FE9013;
   cursor: pointer;
@@ -2241,7 +2264,23 @@ header .background_active {
 }
 @media (max-width: 1599px) {
   .testimonials .range::-moz-range-thumb {
-    width: 75px;
+    width: 48.75px;
+  }
+}
+@media (max-width: 1599px) {
+  .testimonials .button-wrapper {
+    width: 940px;
+  }
+}
+@media (max-width: 999px) {
+  .testimonials .button-wrapper {
+    width: 100%;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 639px) {
+  .testimonials .button-wrapper {
+    padding-top: 30px;
   }
 }
 @media (max-width: 999px) {

@@ -58,3 +58,29 @@ document.addEventListener('click', (e)=> {
 	}
 })
 // pop up end
+
+// Testimonials range slider start
+
+const sliderRange = document.querySelector('.range')
+const testersSlider = document.querySelector('.testers-reviews')
+const testerGap = 29;
+
+sliderRange.addEventListener('change', () => {
+	let cardWidth = document.querySelector('.pop-up_wrapper').offsetWidth
+// 	if (sliderRange.value <= 4) {
+// 		testersSlider.style.left = 0 + "px"
+// 	}
+	console.log(cardWidth)
+// console.log(sliderRange.value)
+// if (sliderRange.value > 4)
+// testersSlider.style.left = (() + "px")
+if (sliderRange.value == 0) {
+	testersSlider.style.left = 0 + "px"
+	return
+}
+
+testersSlider.style.left = (( - (sliderRange.value * cardWidth + testerGap * (sliderRange.value) )) + "px")
+console.log(testersSlider.style.left)
+})
+
+// Testimonials range slider end
