@@ -1,4 +1,4 @@
-// console.log('по вопросам discord: denismezhenin, не успел еще доделать donate сраницу')
+alert('не успел еще доделать slider, если есть возможность, просьба проверить работу в среду, заранее спасибо. по вопросам discord: denismezhenin')
 
 // burger menu start
 const hamburger = document.querySelector('.hamburger');
