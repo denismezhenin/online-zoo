@@ -31,30 +31,43 @@ document.addEventListener('click', (e) => {
 	}
 })
 // burger menu end
-// pop up start 
 
-const reviewWrapper = document.querySelector('.testers-reviews')
-const popUp = document.querySelector('.pop-up_wrapper')
-const closeReview = document.querySelector('.close-rewiew')
-
-
-reviewWrapper.addEventListener('click', (e) => {
-	if (e.target.closest('.testimonials-card')) {
-		let reviewCard = e.target.closest('.testimonials-card')
-		let popUp = e.target.closest('.pop-up_wrapper')
-		
-		// console.log(e.target.closest('.testimonials-card'))
-		reviewCard.classList.add('testimonials-card_active');
-		popUp.classList.add('pop-up_wrapper_active')
-		// closeReview.classList.add('close-rewiew_active')
+const moneyInput = document.querySelector('.money-amount')
+const maxLength = 4
+moneyInput.addEventListener('input', ()=> {
+	// console.log(moneyInput.value)
+	// console.log(amount)
+	if (moneyInput.value.length > maxLength) {
+		moneyInput.value = +((moneyInput.value).toString().substr(0, maxLength))
 	}
-})
-document.addEventListener('click', (e)=> {
-	let target = e.target.classList
-	if ( target.contains('close-rewiew') || target.contains('pop-up_wrapper_active')) {
-		document.querySelector('.pop-up_wrapper_active').classList.remove('pop-up_wrapper_active');
-		document.querySelector('.testimonials-card_active').classList.remove('testimonials-card_active')
-		closeReview.classList.remove('close-rewiew_active')
+	amount.forEach((element, index) => {
+		if(moneyInput.value != element.value) {
+			element.checked = false
+		}
+	
+	})
+
+	amount.forEach((element, index) => {
+	if(moneyInput.value == element.value) {
+		element.checked = true
 	}
+
 })
-// pop up end
+
+})
+
+const amount = document.querySelectorAll('input[name="money"]');
+// amount.forEach((element, index) => {
+// 	if(element.checked) {
+// 		console.log(element.value)
+// }})
+
+// console.log(amount.push9);
+amount.forEach(el => {
+	el.addEventListener('change', ()=> {
+		console.log(el.value)
+		moneyInput.value = el.value
+	})
+})
+
+	

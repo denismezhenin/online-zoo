@@ -2061,6 +2061,21 @@ header .background_active {
     padding-bottom: 30px;
   }
 }
+@media (max-width: 999px) {
+  .testimonials .testers-reviews .pop-up_wrapper_active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 200;
+    padding: 20px;
+  }
+}
 .testimonials .testers-reviews .testimonials-card {
   padding: 15px 15px 19px 16px;
   overflow: hidden;
@@ -2082,11 +2097,6 @@ header .background_active {
 @media (max-width: 639px) {
   .testimonials .testers-reviews .testimonials-card {
     padding: 10px 29px 12px 12px;
-  }
-}
-@media (max-width: 1599px) {
-  .testimonials .testers-reviews .testimonials-card:last-child {
-    display: none;
   }
 }
 .testimonials .testers-reviews .testimonials-card:before {
@@ -2153,6 +2163,29 @@ header .background_active {
 @media (max-width: 999px) {
   .testimonials .testers-reviews .testimonials-card .user-information {
     margin: 0px 0px 10px 6px;
+  }
+}
+@media (max-width: 999px) {
+  .testimonials .testers-reviews .testimonials-card_active {
+    z-index: 300;
+  }
+}
+@media (max-width: 999px) {
+  .testimonials .testers-reviews .testimonials-card_active .user-review {
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+  }
+}
+@media (max-width: 999px) {
+  .testimonials .testers-reviews .testimonials-card_active .close-rewiew {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    background: url("../../assets/images/x_icon.svg") no-repeat center;
   }
 }
 .testimonials .rangecontainer {
