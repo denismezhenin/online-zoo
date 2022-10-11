@@ -1527,6 +1527,7 @@ header .background_active {
   grid-column-gap: 28px;
   grid-row-gap: 20px;
   align-items: center;
+  overflow: hidden;
 }
 @media (max-width: 1599px) {
   .animal-slider .animals-blocks {
@@ -1581,6 +1582,9 @@ header .background_active {
   height: 423px;
   overflow: hidden;
   transition: transform 0.4s;
+}
+.animal-slider .animals-blocks .card_active {
+  transition: transform 0s;
 }
 @media (max-width: 1599px) {
   .animal-slider .animals-blocks .card {
@@ -2065,6 +2069,7 @@ header .background_active {
   grid-column-gap: 29px;
   padding-bottom: 17px;
   position: relative;
+  transition: 0.4s;
 }
 @media (max-width: 1599px) {
   .testimonials .testers-reviews {

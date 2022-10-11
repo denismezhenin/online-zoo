@@ -1,5 +1,5 @@
-alert('не успел еще доделать slider, если есть возможность, просьба проверить работу в среду, заранее спасибо. по вопросам discord: denismezhenin')
-
+console.log('по вопросам discord: denismezhenin')
+import animals from '..//js/animals.js'
 // burger menu start
 const hamburger = document.querySelector('.hamburger');
 const navigation = document.querySelector('.navigation');
@@ -17,13 +17,10 @@ document.body.style.overflow = 'hidden'
 
 document.addEventListener('click', (e) => {
 	let target = e.target.classList
-	// console.log(e.target)
 	if (target.contains('hamburger') || target.contains('hamburger-line')) {
-		// console.log(e.target)
 		return;
 	}
 	if((!target.contains('navigation')) && !target.contains('nav-item')) {
-		// console.log(e.target)
 		navigation.classList.remove('navigation_active')
 		navWrapper.classList.remove('background_active')
 		closeBurger.classList.remove('close-burger_active')
@@ -42,11 +39,8 @@ reviewWrapper.addEventListener('click', (e) => {
 	if (e.target.closest('.testimonials-card')) {
 		let reviewCard = e.target.closest('.testimonials-card')
 		let popUp = e.target.closest('.pop-up_wrapper')
-		
-		// console.log(e.target.closest('.testimonials-card'))
 		reviewCard.classList.add('testimonials-card_active');
 		popUp.classList.add('pop-up_wrapper_active')
-		// closeReview.classList.add('close-rewiew_active')
 	}
 })
 document.addEventListener('click', (e)=> {
@@ -67,20 +61,85 @@ const testerGap = 29;
 
 sliderRange.addEventListener('change', () => {
 	let cardWidth = document.querySelector('.pop-up_wrapper').offsetWidth
-// 	if (sliderRange.value <= 4) {
-// 		testersSlider.style.left = 0 + "px"
-// 	}
-	console.log(cardWidth)
-// console.log(sliderRange.value)
-// if (sliderRange.value > 4)
-// testersSlider.style.left = (() + "px")
 if (sliderRange.value == 0) {
 	testersSlider.style.left = 0 + "px"
 	return
 }
-
 testersSlider.style.left = (( - (sliderRange.value * cardWidth + testerGap * (sliderRange.value) )) + "px")
-console.log(testersSlider.style.left)
 })
 
 // Testimonials range slider end
+
+// pets slider start
+const card = document.querySelectorAll('.card')
+const prev = document.querySelectorAll('.prev')
+const next = document.querySelectorAll('.next')
+const animalImage = document.querySelectorAll('.card img')
+const animalName = document.querySelectorAll('.animal-name')
+const animalLocation = document.querySelectorAll('.animal-location')
+const translate = 350
+
+const moveright = () => {
+	freezeButton();
+	setTimeout((() => replaceCards()), 200)
+	card.forEach(el => {
+		el.style.transform = `translate(${translate}%)`;
+		setTimeout((() => el.classList.add('card_active')), 150);
+		setTimeout((() => el.style.transform = `translate(${-translate}%)`), 200);
+		setTimeout((() => el.classList.remove('card_active')), 250)
+		setTimeout((() => el.style.transform = "translate(00%)"), 300)
+
+	})
+}
+const moveleft = () => {
+	freezeButton();
+	setTimeout((() => replaceCards()), 200)
+	card.forEach(el => {
+		el.style.transform = `translate(${-translate}%)`;
+		setTimeout((() => el.classList.add('card_active')), 150);
+		setTimeout((() => el.style.transform = `translate(${translate}%)`), 200);
+		setTimeout((() => el.classList.remove('card_active')), 250)
+		setTimeout((() => el.style.transform = "translate(00%)"), 300)
+	})
+}
+
+prev.forEach(el => {
+	el.addEventListener('click', moveleft)
+})
+next.forEach(el => {
+	el.addEventListener('click', moveright)
+})
+function replaceCards() {
+	
+	animals.sort(() => (Math.random() - 0.5))
+	
+	animalImage.forEach((el, index) => {
+		el.src = `${animals[index].img}`
+	})
+	animalName.forEach((el, index) => {
+		el.innerHTML = `${animals[index].name}`
+	})
+	animalLocation.forEach((el, index) => {
+		el.classList.remove('meat');
+		el.classList.remove('banana');
+		el.innerHTML = `${animals[index].location}`
+		el.classList.add(`${animals[index].food}`)
+	})
+}
+
+function freezeButton() {
+	prev.forEach(el => {
+		el.removeEventListener('click', moveleft)
+	})
+	next.forEach(el => {
+		el.removeEventListener('click', moveright)
+	})
+	setTimeout(() => {
+		prev.forEach(el => {
+			el.addEventListener('click', moveleft)
+		})
+		next.forEach(el => {
+			el.addEventListener('click', moveright)
+		})
+	},650)
+}
