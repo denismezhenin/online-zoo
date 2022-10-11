@@ -653,9 +653,6 @@ header .background_active {
 .header .navigation .first {
   color: #F9804B;
 }
-.header .navigation nav.link:hover, .header .navigation .first:hover {
-  color: #FFFFFF;
-}
 .header .nav-item {
   padding-right: 58px;
 }
@@ -1100,7 +1097,7 @@ header .background_active {
   margin-top: 9px;
   text-align: center;
   z-index: 100;
-  padding-bottom: 243px;
+  padding-bottom: 118px;
 }
 @media (max-width: 1599px) {
   .main-tittle_block {
@@ -1238,9 +1235,11 @@ header .background_active {
   position: relative;
   padding-bottom: 175px;
   overflow: hidden;
+  padding-top: 125px;
 }
 @media (max-width: 1599px) {
   .backstage {
+    padding-top: 0;
     padding-bottom: 142px;
   }
 }
@@ -1260,7 +1259,7 @@ header .background_active {
   content: "";
   height: 605px;
   width: 204px;
-  top: -125px;
+  top: 0px;
   right: 0;
   position: absolute;
   background: url("../../assets/images/flower_foto1.png") no-repeat center;
@@ -2104,6 +2103,11 @@ header .background_active {
     padding: 20px;
   }
 }
+@media (max-width: 639px) {
+  .testimonials .testers-reviews .pop-up_wrapper_active {
+    padding: 40px 10px 10px 10px;
+  }
+}
 .testimonials .testers-reviews .testimonials-card {
   padding: 15px 15px 19px 16px;
   overflow: hidden;
@@ -2125,6 +2129,7 @@ header .background_active {
 @media (max-width: 639px) {
   .testimonials .testers-reviews .testimonials-card {
     padding: 10px 29px 12px 12px;
+    max-height: 530px;
   }
 }
 .testimonials .testers-reviews .testimonials-card:before {

@@ -628,15 +628,22 @@
 					background: #000000;
 				}
 			
-
-				.nav-item:nth-child(4) {
+				.header .navigation .first {
+					color: #FFFFFF;
+					&:hover {
+						color: $orange;
+					}
+				}
+				.header .navigation_active .first {
+					color: #000000;
+					&:hover {
+						color: $orange;
+					}
+				}
+				.nav-item:nth-child(5) {
 	
 					a {
 						color: $orange;
-		
-						&:hover {
-							color: #FFFFFF;
-						}
 					}
 				}
 			}

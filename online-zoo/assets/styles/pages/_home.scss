@@ -51,7 +51,7 @@
 	margin-top: 9px;
 	text-align: center;
 	z-index: 100;
-	padding-bottom: 243px;
+	padding-bottom: 118px;
 
 	@include small-desktop {
 		width: 400.25px;
@@ -180,8 +180,10 @@
 	position: relative;
 	padding-bottom: 175px;
 	overflow: hidden;
+	padding-top: 125px;
 	// padding-top: 30px;
 	@include small-desktop {
+		padding-top: 0;
 		padding-bottom: 142px;
 	}
 	@include tablet {
@@ -196,7 +198,7 @@
 		content: "";
 		height: 605px;
 		width: 204px; 
-		top: -125px;
+		top: 0px;
 		right: 0;
 		position: absolute;
 		background: url("../../assets/images/flower_foto1.png") no-repeat center;
@@ -990,6 +992,10 @@ opacity: 0.9;
 					background-color: rgb(0, 0, 0, 0.4);
 					z-index: 200;
 					padding: 20px;
+					// overflow: hidden;
+				}
+				@include mobile {
+					padding: 40px 10px 10px 10px;
 				}
 			}
 		}
@@ -1012,6 +1018,8 @@ opacity: 0.9;
 			}
 			@include mobile {
 				padding: 10px 29px 12px 12px;
+				// overflow: auto;
+				max-height: 530px;
 			}
 			&:last-child {
 				// @include small-desktop {

@@ -653,9 +653,6 @@ header .background_active {
 .header .navigation .first {
   color: #F9804B;
 }
-.header .navigation nav.link:hover, .header .navigation .first:hover {
-  color: #FFFFFF;
-}
 .header .nav-item {
   padding-right: 58px;
 }
@@ -1734,9 +1731,18 @@ header .background_active {
 header .fhone {
   background: #000000;
 }
-header .nav-item:nth-child(4) a {
+header .header .navigation .first {
+  color: #FFFFFF;
+}
+header .header .navigation .first:hover {
   color: #F9804B;
 }
-header .nav-item:nth-child(4) a:hover {
-  color: #FFFFFF;
+header .header .navigation_active .first {
+  color: #000000;
+}
+header .header .navigation_active .first:hover {
+  color: #F9804B;
+}
+header .nav-item:nth-child(5) a {
+  color: #F9804B;
 }/*# sourceMappingURL=main.css.map */
