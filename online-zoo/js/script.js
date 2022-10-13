@@ -59,7 +59,7 @@ const sliderRange = document.querySelector('.range')
 const testersSlider = document.querySelector('.testers-reviews')
 const testerGap = 29;
 
-sliderRange.addEventListener('change', () => {
+sliderRange.addEventListener('input', () => {
 	let cardWidth = document.querySelector('.pop-up_wrapper').offsetWidth
 if (sliderRange.value == 0) {
 	testersSlider.style.left = 0 + "px"

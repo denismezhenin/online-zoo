@@ -964,6 +964,7 @@ opacity: 0.9;
 		padding-bottom: 17px;
 		position: relative;
 		transition: 0.4s;
+		left: 0px;
 
 		@include small-desktop {
 			grid-template-columns: repeat(11, 294px);
