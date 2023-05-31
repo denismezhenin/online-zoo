@@ -4,7 +4,7 @@ Online-zoo responsive landing page for the zoo.
 
 Deploy [link](https://rolling-scopes-school.github.io/denismezhenin-JSFE2022Q3/online-zoo/pages/main/)
 
-## Figma layout [link]([https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks)
+## Figma layout [link](https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks)
 
 ## Key features:
 - pixel perfect html layout according to figma design
